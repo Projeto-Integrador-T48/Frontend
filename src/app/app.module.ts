@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { OdsComponent } from './ods/ods.component';
 import { RodapeComponent } from './rodape/rodape.component';
@@ -16,6 +17,7 @@ import { AtualizarComponent } from './atualizar/atualizar.component';
 @NgModule({
   declarations: [
     AppComponent,
+    CadastrarComponent,
     CabecalhoComponent,
     OdsComponent,
     RodapeComponent,
@@ -24,6 +26,7 @@ import { AtualizarComponent } from './atualizar/atualizar.component';
     LoginComponent,
     MenuComponent,
     AtualizarComponent
+
   ],
   imports: [
     BrowserModule,
