@@ -14,11 +14,11 @@
     --cg-50: #F8F9FA;
 
     --verde: #0BE38E;
-    --violeta: #753CBD;
+    --violeta: #978CFF;
     --roxo-escuro: #260673;
 
-    --verde-h: #522D81;
-    --violeta-h: #0D9A62;
+    --violeta-h: #625BA6;
+    --verde-h: #0D9A62;
 
     --verde-25: #E5E2FF;
     --violeta-25: #C2F8E2;
@@ -33,3 +33,98 @@ html {
     scroll-behavior: smooth;
   }
 
+.py-100{
+  padding: 12rem 0;
+}
+
+.py-50{
+  padding: 7rem 0;
+}
+
+.pb-50{
+  padding-bottom: 3rem;
+}
+
+
+
+.text-cg-50{
+  color: var(--cg-50);
+}
+
+.text-cg-500{
+  color: var(--cg-500);
+}
+
+
+.bg-cg-50{
+  background-color: var(--cg-50);
+}
+
+.bg-roxo-escuro{
+  background-color: var(--roxo-escuro);
+}
+
+.bb-cg-200{
+  border-bottom: 1px solid var(--cg-200);
+}
+
+.btn-verde{
+  background-color: var(--verde)!important;
+  color: var(--cg-900);
+}
+
+.btn-verde:hover{
+  background-color: var(--verde-h)!important;
+  color: var(--cg-900);
+}
+
+
+
+
+
+
+
+
+
+#bg-img{
+  background-color: var(--cg-50);
+  height: 100vh;
+}
+
+.conteudo p{
+  font-size: 1.3rem;
+  color: var(--cg-500);
+  font-weight: 400;
+}
+
+.conteudo h2{
+  font-size: 4rem;
+  color: var(--roxo-escuro);
+  font-weight: 600;
+}
+
+.conteudo h3{
+  font-size: 2rem;
+  color: var(--violeta);
+  font-weight: 600;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cg-50);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--cg-200);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cg-500);
+}
