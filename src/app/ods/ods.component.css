@@ -1,6 +1,18 @@
-#imgbg{
+/* #imgbg{
   background-image: url("../../assets/imagens/oito.png");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+} */
+
+p{
+  font-size: 1.3rem!important;
+  color: var(--cg-50)!important;
+  font-weight: 400!important;
+}
+
+h3{
+  font-size: 2rem!important;
+  color: var(--cg-50)!important;
+  font-weight: 600!important;
 }
