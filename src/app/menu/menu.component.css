@@ -4,7 +4,6 @@
     text-decoration: none;
 }
 
-
 a, button{
     font-family: 'Rubik', sans-serif;
 }
@@ -52,5 +51,3 @@ button:focus{
 button:hover{
     transform: scale(1.1);
 }
-
-
