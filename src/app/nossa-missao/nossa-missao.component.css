@@ -1,29 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-
-*{
-    font-family: 'Rubik', sans-serif;
-}
-
-.conteudo{
+/* .conteudo{
     height: 47vw;
-}
-
-.conteudo .container-fluid .row .col-md-6 p{
-    font-size: 1.3rem;
-    color: #6C757D;
-    font-weight: 400;
-}
-
-.conteudo .container-fluid .row .col-md-12 h1{
-    font-size: 4rem;
-    margin-bottom: 35px;
-    color: #260673;
-    font-weight: 600;
-}
-
-.conteudo .container-fluid .row .col-md-12 h6{
-    font-size: 1.6rem;
-    margin-bottom: 40px;
-    color: #978CFF;
-    font-weight: 600;
-}
+} */
