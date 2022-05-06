@@ -26,9 +26,10 @@
 
 * {
     font-family: 'Rubik', sans-serif;
+    color: var(--cg-800);
 }
 
 html {
     scroll-behavior: smooth;
   }
-  
+
