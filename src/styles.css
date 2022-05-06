@@ -20,8 +20,8 @@
     --violeta-h: #625BA6;
     --verde-h: #0D9A62;
 
-    --verde-25: #E5E2FF;
-    --violeta-25: #C2F8E2;
+    --violeta-25: #E5E2FF;
+    --verde-25: #C2F8E2;
   }
 
 * {
@@ -70,12 +70,11 @@ html {
 
 .btn-verde{
   background-color: var(--verde)!important;
-  color: var(--cg-900);
+  color: var(--cg-50);
 }
 
 .btn-verde:hover{
-  background-color: var(--verde-h)!important;
-  color: var(--cg-900);
+  background-color: var(--verde-25)!important;
 }
 
 

@@ -47,7 +47,7 @@ validaNome() {
   let txtNome = <HTMLLabelElement>document.querySelector('#txtNome');
   let nome = <HTMLInputElement>document.querySelector('#nome');
 
-  if (this.usuario.nome.length < 3) {
+  if (this.usuario.nome.length < 2) {
     txtNome.innerHTML = 'Digite um nome válido';
     txtNome.style.color = 'red';
     nome.style.border = 'solid 1px red';
