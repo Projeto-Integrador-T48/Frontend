@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { AtualizarComponent } from './atualizar/atualizar.component';
 import { NossaMissaoComponent } from './nossa-missao/nossa-missao.component';
+import { TemaComponent } from './tema/tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 
@@ -32,9 +33,9 @@ import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
     MenuComponent,
     AtualizarComponent,
     NossaMissaoComponent,
+    TemaComponent,
     FeedComponent,
-    MenuUsuarioComponent
-
+    MenuUsuarioComponent,
   ],
   imports: [
     BrowserModule,
