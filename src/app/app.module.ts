@@ -2,7 +2,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +15,9 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { AtualizarComponent } from './atualizar/atualizar.component';
 import { NossaMissaoComponent } from './nossa-missao/nossa-missao.component';
-import { FeedComponent } from './feed/feed.component';
-import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -31,9 +31,7 @@ import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
     LoginComponent,
     MenuComponent,
     AtualizarComponent,
-    NossaMissaoComponent,
-    FeedComponent,
-    MenuUsuarioComponent
+    NossaMissaoComponent
 
   ],
   imports: [
@@ -42,10 +40,7 @@ import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [{
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy,
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
