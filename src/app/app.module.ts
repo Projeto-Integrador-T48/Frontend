@@ -19,6 +19,7 @@ import { NossaMissaoComponent } from './nossa-missao/nossa-missao.component';
 import { TemaComponent } from './tema/tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
+import { PostagemComponent } from './postagem/postagem.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
     TemaComponent,
     FeedComponent,
     MenuUsuarioComponent,
+    PostagemComponent,
   ],
   imports: [
     BrowserModule,
