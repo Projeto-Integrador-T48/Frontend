@@ -6,6 +6,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { MenuComponent } from './menu/menu.component';
+import { PostagemComponent } from './postagem/postagem.component';
 import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'tema', component: TemaComponent},
   {path: 'feed', component: FeedComponent},
   {path: 'menu-usuario', component: MenuUsuarioComponent},
+  {path: 'minhas-postagens', component: PostagemComponent}
 ];
 
 @NgModule({
