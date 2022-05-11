@@ -15,6 +15,7 @@ export class FeedComponent implements OnInit {
 
   ngOnInit(){
     if(environment.token == ''){
+      alert('Sua seção expirou, faça o login novamente!')
       this.router.navigate(['/inicio'])
     }
   }
