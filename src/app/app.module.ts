@@ -16,9 +16,7 @@ import { MenuComponent } from './menu/menu.component';
 import { AtualizarComponent } from './atualizar/atualizar.component';
 import { NossaMissaoComponent } from './nossa-missao/nossa-missao.component';
 import { FeedComponent } from './feed/feed.component';
-
-
-
+import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +31,8 @@ import { FeedComponent } from './feed/feed.component';
     MenuComponent,
     AtualizarComponent,
     NossaMissaoComponent,
-    FeedComponent
+    FeedComponent,
+    MenuUsuarioComponent
 
   ],
   imports: [
