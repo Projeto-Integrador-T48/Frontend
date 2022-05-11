@@ -25,6 +25,15 @@ export class AuthService {
     );
   }
 
+  //lógica para o menu da landing page inicial, esse menu só deve aparecer se o user estiver deslogado
+  deslogado() {
+    let ok = false;
+    if (environment.token == '') {
+      ok = true;
+    }
+    return ok;
+  }
+
   logado() {
     let ok = false;
     if (environment.token != '') {
