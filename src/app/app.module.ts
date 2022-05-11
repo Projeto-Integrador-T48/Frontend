@@ -14,6 +14,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { AtualizarComponent } from './atualizar/atualizar.component';
+import { NossaMissaoComponent } from './nossa-missao/nossa-missao.component';
 
 
 
@@ -29,7 +30,8 @@ import { AtualizarComponent } from './atualizar/atualizar.component';
     InicioComponent,
     LoginComponent,
     MenuComponent,
-    AtualizarComponent
+    AtualizarComponent,
+    NossaMissaoComponent
 
   ],
   imports: [
