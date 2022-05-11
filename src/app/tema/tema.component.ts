@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-tema',
   templateUrl: './tema.component.html',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemaComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
