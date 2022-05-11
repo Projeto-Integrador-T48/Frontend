@@ -55,6 +55,9 @@ html {
   color: var(--cg-500);
 }
 
+.text-violeta{
+  color: var(--violeta);
+}
 
 .bg-cg-50{
   background-color: var(--cg-50);
