@@ -46,136 +46,36 @@ html {
 }
 
 
-/* BOOTSTRAP TEXT */
+
 .text-cg-50{
-  color: var(--cg-50)!important;
-}
-
-.text-cg-100{
-  color: var(--cg-100)!important;
-}
-
-.text-cg-200{
-  color: var(--cg-200)!important;
-}
-
-.text-cg-300{
-  color: var(--cg-300)!important;
-}
-
-.text-cg-400{
-  color: var(--cg-400)!important;
+  color: var(--cg-50);
 }
 
 .text-cg-500{
-  color: var(--cg-500)!important;
-}
-
-.text-cg-600{
-  color: var(--cg-600)!important;
-}
-
-.text-cg-700{
-  color: var(--cg-700)!important;
-}
-
-.text-cg-800{
-  color: var(--cg-800)!important;
-}
-
-.text-cg-900{
-  color: var(--cg-900)!important;
+  color: var(--cg-500);
 }
 
 .text-violeta{
-  color: var(--violeta)!important;
+  color: var(--violeta);
 }
 
-
-.text-verde{
-  color: var(--verde)!important;
-}
-
-
-/* BOOTSTRAP BG */
 .bg-cg-50{
   background-color: var(--cg-50);
-}
-
-.bg-cg-100{
-  background-color: var(--cg-100);
-}
-
-.bg-cg-200{
-  background-color: var(--cg-200);
 }
 
 .bg-roxo-escuro{
   background-color: var(--roxo-escuro);
 }
 
-
-/* BOOTSTRAP BORDAS */
 .bb-cg-200{
   border-bottom: 1px solid var(--cg-200);
-}
-
-
-/* BOOTSTRAP BTN */
-.btn-cg-50{
-  background-color: var(--cg-50)!important;
-  color: var(--cg-500);
-}
-
-.btn-cg-100{
-  background-color: var(--cg-100)!important;
-  color: var(--cg-500);
-}
-
-.btn-cg-200{
-  background-color: var(--cg-200)!important;
-  color: var(--cg-500);
-}
-
-.btn-cg-300{
-  background-color: var(--cg-300)!important;
-  color: var(--cg-500);
-}
-
-.btn-cg-400{
-  background-color: var(--cg-400)!important;
-  color: var(--cg-500);
-}
-
-.btn-cg-500{
-  background-color: var(--cg-500)!important;
-  color: var(--cg-50);
-}
-
-.btn-cg-600{
-  background-color: var(--cg-600)!important;
-  color: var(--cg-50);
-}
-
-.btn-cg-700{
-  background-color: var(--cg-700)!important;
-  color: var(--cg-500);
-}
-
-.btn-cg-800{
-  background-color: var(--cg-800)!important;
-  color: var(--cg-500);
-}
-
-.btn-cg-900{
-  background-color: var(--cg-900)!important;
-  color: var(--cg-500);
 }
 
 .btn-verde{
   background-color: var(--verde)!important;
   color: var(--cg-50);
 }
+
 .btn-verde:hover{
   background-color: var(--verde-25)!important;
 }
@@ -185,9 +85,11 @@ html {
   color: var(--cg-50);
 }
 
-/* .btn-violeta:hover{
+.btn-violeta:hover{
   background-color: var(--violeta-h)!important;
-} */
+}
+
+
 
 
 
