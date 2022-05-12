@@ -80,7 +80,14 @@ html {
   background-color: var(--verde-25)!important;
 }
 
+.btn-violeta{
+  background-color: var(--violeta)!important;
+  color: var(--cg-50);
+}
 
+.btn-violeta:hover{
+  background-color: var(--violeta-h)!important;
+}
 
 
 
