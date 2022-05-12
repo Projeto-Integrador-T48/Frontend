@@ -59,7 +59,7 @@
             </div>
             <hr class="mr-0 ml-0">
             <h5 class="card-title m-0 mb-3">{{item.titulo}}</h5>
-            <ng-container *ngIf="item.foto != ''" >
+            <ng-container *ngIf="item.foto != null" >
               <img [src]=item.foto alt=""
               width="100%"
               class="img-fluid"
@@ -144,7 +144,7 @@
             </select>
             <p class="mt-3">Selecione o valor:</p>
             <select name="valor" id="valor" class="form-control mt-2" (change)='setValor($event)'>
-              <!-- <option disabled selected>Selecione o valor:</option> -->
+              <option disabled selected>Selecione o valor:</option>
               <option value="gratis">Gratuito</option>
               <option value="$">de R$ 1 - R$ 99</option>
               <option value="$$">de R$ 100 - R$ 499</option>
