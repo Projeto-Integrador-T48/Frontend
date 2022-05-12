@@ -1,3 +1,16 @@
 /* .conteudo{
     height: 47vw;
 } */
+
+    .container-fluid{
+        background-position: center;
+        background-size: contain;
+        width: 100vw;
+        height: 393px;
+        background-repeat: no-repeat;
+        margin-bottom: 100px;
+        
+      }
+h2 {
+    color: var(--violeta);
+}
