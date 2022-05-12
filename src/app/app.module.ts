@@ -41,7 +41,7 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     MenuUsuarioComponent,
     PostagemComponent,
     TemaEditComponent,
-    TemaDeleteComponent,
+    TemaDeleteComponent
   ],
   imports: [
     BrowserModule,
