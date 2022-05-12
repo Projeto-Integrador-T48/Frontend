@@ -20,6 +20,8 @@ import { TemaComponent } from './tema/tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { PostagemComponent } from './postagem/postagem.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { PostagemComponent } from './postagem/postagem.component';
     FeedComponent,
     MenuUsuarioComponent,
     PostagemComponent,
+    TemaEditComponent,
+    TemaDeleteComponent,
   ],
   imports: [
     BrowserModule,
