@@ -37,7 +37,7 @@ import { PostagemComponent } from './postagem/postagem.component';
     TemaComponent,
     FeedComponent,
     MenuUsuarioComponent,
-    PostagemComponent,
+    PostagemComponent
   ],
   imports: [
     BrowserModule,
