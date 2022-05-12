@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
-  }
+}
 
   entrar(){
     this.auth.entrar(this.usuarioLogin).subscribe({
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         environment.foto = this.usuarioLogin.foto
         environment.id = this.usuarioLogin.id
 
-        this.router.navigate(['/inicio'])
+        this.router.navigate(['/feed'])
 
       }, error: erro =>{
         if(erro.status == 401){
