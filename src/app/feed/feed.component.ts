@@ -22,6 +22,8 @@ export class FeedComponent implements OnInit {
   listaTemas: Tema[]
   idTema: number
 
+  valor: string
+
   usuario: Usuario = new Usuario()
   idUser = environment.id
 
@@ -69,6 +71,11 @@ export class FeedComponent implements OnInit {
     })
   }
 
+  setValor(event: any) {
+    this.valor = event.target.value;
+  }
+
+
 
   publicar(){
     this.tema.id = this.idTema
@@ -76,6 +83,8 @@ export class FeedComponent implements OnInit {
 
     this.usuario.id = this.idUser
     this.postagem.usuario = this.usuario
+
+    this.postagem.valor = this.valor
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
