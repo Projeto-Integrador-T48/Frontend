@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment.prod';
 export class MenuUsuarioComponent implements OnInit {
   nome = environment.nome
   foto = environment.foto
+  idUser = environment.id
 
   constructor(private router: Router) { }
 
