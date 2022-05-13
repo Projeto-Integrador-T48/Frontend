@@ -33,7 +33,7 @@
             <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" routerLink="/minhas-postagens">
               <i class="fa fa-user-o pr-2 text-violeta" aria-hidden="true"></i> Minhas postagens
             </button>
-            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" routerLink="/editar-perfil">
+            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" [routerLink]="['/usuario-edit', idUser]">
               <i class="fa fa-sliders pr-2 text-violeta" aria-hidden="true"></i> Editar perfil
             </button>
           </div>
