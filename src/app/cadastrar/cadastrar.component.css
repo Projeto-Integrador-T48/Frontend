@@ -32,3 +32,11 @@ a:hover {
     text-align: center;
     pointer-events: none;
   }
+
+  .form-control-icon {
+      color: var(--cg-400);
+  }
+
+:placeholder-shown  {
+    font-family: 'Rubik', sans-serif!important;
+  }
