@@ -100,27 +100,6 @@
             <div class="col-md-6" id="img-bg">
                 <img class="img-fluid" src="../../assets/img/contato.png" alt="">
             </div>
-
-         <div class="col-md-6">
-        
-            <div class="col-md-10">
-                <form class="text-center">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1" id="txtNome">Nome</label>
-                        <input [(ngModel)]="usuario.nome" (input)="validanome()" type="nome" class="form-control nome" id="nome" name="nome" placeholder="Seu nome">
-                      </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1" id="txtEmail">Endereço de email</label>
-                      <input [(ngModel)]="usuario.usuario" (input)="validaemail()"  type="email" class="form-control email" id="usuario" name= "email" placeholder="nome@exemplo.com">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlTextarea1" id="txtAssunto">Assunto</label>
-                    <textarea (keyup)="validaassunto()" class="form-control" id="assunto" name="assunto" rows="3"></textarea>
-                    </div>
-                    <button class="btn btn-violeta"(click)="enviar()">Enviar</button>
-                  </form>
-                  
-
             <div class="col-md-4">
 
                 <div class="col-md-12 m-0 p-0">
@@ -145,7 +124,6 @@
                     </form>
 
                 </div>
-
             </div>
         </div>
 
