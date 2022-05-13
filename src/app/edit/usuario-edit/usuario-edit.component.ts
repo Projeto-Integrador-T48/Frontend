@@ -78,7 +78,8 @@ export class UsuarioEditComponent implements OnInit {
     // this.usuario.tipo = this.tipoDeUsuario;
     if (this.usuario.senha != this.confirmarSenha) {
       alert('As senhas não são identicas');
-    } else {      
+    } else { 
+      this.usuario.postagem = []     
       this.auth.atualizar(this.usuario).subscribe({
         next: (resp: Usuario) => {
           this.usuario = resp;
