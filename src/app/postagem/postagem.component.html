@@ -1,27 +1,33 @@
 <div class="conteiner-fluid">
   <div class="container">
-    <div class="card-columns">
-      <div class="card text-center" *ngFor='let item of usuario.postagem'>
-        <div class="card-body">
-          <h5 class="card-title m-0">{{item.titulo}}</h5>
-          <small class="text-muted"> Tema: {{item.tema.categoria}}</small>
-          <p class="card-text mt-3">{{item.descricao}}</p>
-          <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:'HH:mm'}}</small></p>
+    <div class="row card pt-2 pb-2 mb-4" *ngFor='let item of usuario.postagem'>
+      <div class="col-md-12">
+        <div class="d-flex align-items-center">
+            <p class="text-cg-500 mt-3"><i class="fa fa-clock-o  mr-1 text-success" aria-hidden="true"></i> {{item.data | date: 'dd/MM/yyyy'}}</p>
+            <p class="text-cg-500 mt-3"><i class="fa fa-map-marker ml-3 mr-1 text-success" aria-hidden="true"></i> {{item.tema.categoria}}</p>
+            <p class="text-cg-500 mt-3"><i class="fa fa-shopping-bag ml-3 mr-1 text-success" aria-hidden="true"></i> - {{item.valor}}</p>
         </div>
-    
-        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3">Editar</a>
-        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger mr-3" data-toggle="modal">Deletar</a>
-    
-      </div>
+        <hr class="mr-0 ml-0">
+        <h5 class="card-title m-0 mb-3">{{item.titulo}}</h5>
+        <ng-container *ngIf="item.foto != null" >
+          <img [src]=item.foto alt=""
+          width="100%"
+          class="img-fluid"
+          onerror="this.src = 'https://portal.crea-sc.org.br/wp-content/uploads/2017/11/imagem-indisponivel-para-produtos-sem-imagem_15_5.jpg'"              
+          >
+
+        </ng-container>
+        <p class="card-text mt-3 pb-4">{{item.descricao}}</p>
+        
+        <button [routerLink]="['/postagem-edit', item.id]" class="btn btn-info mr-3">Editar</button>
+        <button (click)="idPostagem(item.id)" class="btn btn-danger mr-3" data-toggle="modal" data-target="#deletaPostagem">Deletar</button>
+          
     </div>
   </div>
 </div>
 
-
-
-
 <!-- Modal -->
-<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="deletaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -39,7 +45,7 @@
         </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-danger mr-4" routerLink='/inicio' data-dismiss="modal">Não</button>
+        <button class="btn btn-danger mr-4" routerLink='/minhas-postagens' data-dismiss="modal">Não</button>
         <button class="btn btn-success" (click)='apagar()' data-dismiss="modal">Sim</button>
       </div>
     </div>

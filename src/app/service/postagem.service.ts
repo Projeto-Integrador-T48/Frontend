@@ -20,7 +20,7 @@ export class PostagemService {
   }
 
   getByIdPostagem(id:number):Observable<Postagem>{
-    return this.http.get<Postagem>(`https://https://conectagen.herokuapp.com/postagens/${id}` , this.token)
+    return this.http.get<Postagem>(`https://conectagen.herokuapp.com/postagens/${id}` , this.token)
   }
 
   postPostagem(postagem: Postagem) : Observable<Postagem>{
