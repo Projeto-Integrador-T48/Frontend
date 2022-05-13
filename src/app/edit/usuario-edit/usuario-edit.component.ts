@@ -10,11 +10,12 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./usuario-edit.component.css'],
 })
 export class UsuarioEditComponent implements OnInit {
-  usuario: Usuario = new Usuario();
-  idUsuario: number;
-  confirmarSenha: string;
-  tipoDeUsuario: string;
-  // id= environment.id
+  usuario: Usuario = new Usuario()
+  idUser: number
+  confirmarSenha: string
+  tipoDeUsuario: string
+  foto = environment.foto
+  nome= environment.nome  
 
   constructor(
     private auth: AuthService,
@@ -27,8 +28,10 @@ export class UsuarioEditComponent implements OnInit {
     if (environment.token == '') {
       this.router.navigate(['/inicio']);
     }
-    this.idUsuario = this.route.snapshot.params['idUser'];
-    this.findByIdUser(this.idUsuario);
+    this.idUser = this.route.snapshot.params['id']
+    this.findByIdUser(this.idUser);
+    console.log(this.usuario)
+    
   }
 
   confirmSenha(event: any) {
@@ -52,15 +55,15 @@ export class UsuarioEditComponent implements OnInit {
 
   // }
 
-  tipoUsuario(event: any) {
-    this.tipoDeUsuario = event.target.value;
-  }
+  // tipoUsuario(event: any) {
+  //   this.tipoDeUsuario = event.target.value;
+  // }
 
-  // validaNome(){
+  // validaNome() {
   //   let txtNome = <HTMLLabelElement>document.querySelector('#txtNome');
   //   let nome = <HTMLInputElement>document.querySelector('#nome');
-
-  //   if (this.usuario.nome.length < 3) {
+  
+  //   if (this.usuario.nome.length < 2) {
   //     txtNome.innerHTML = 'Digite um nome válido';
   //     txtNome.style.color = 'red';
   //     nome.style.border = 'solid 1px red';
@@ -72,10 +75,10 @@ export class UsuarioEditComponent implements OnInit {
   // }
 
   atualizar() {
-    this.usuario.tipo = this.tipoDeUsuario;
+    // this.usuario.tipo = this.tipoDeUsuario;
     if (this.usuario.senha != this.confirmarSenha) {
       alert('As senhas não são identicas');
-    } else {
+    } else {      
       this.auth.atualizar(this.usuario).subscribe({
         next: (resp: Usuario) => {
           this.usuario = resp;
@@ -98,10 +101,11 @@ export class UsuarioEditComponent implements OnInit {
     }
   }
 
-  findByIdUser(id: number) {
-    this.auth.getByIdUser(id).subscribe((resp: Usuario) => {
-      this.usuario = resp;
-      this.usuario.senha = '';
-    });
+  findByIdUser(id:number) {
+    this.auth.getByIdUser(id).subscribe((resp : Usuario) => {
+      this.usuario = resp      
+      this.usuario.senha = ''
+    })
   }
+
 }

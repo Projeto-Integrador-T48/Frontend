@@ -14,7 +14,7 @@
                     <img class="rounded-circle img-fluid b-img" width="45rem" src="{{foto}}" onerror="this.src = '../../assets/img/gravatar.png'">
                 </li>
                 <li class="nav-item pl-2">
-                    <p class="m-0"><a class="" routerLink="/atulizar-perfil">Meu perfil</a></p>
+                    <p class="m-0"><a class="" [routerLink]="['/usuario-edit', idUser]" >Meu perfil</a></p>
                 </li>
                 <li class="nav-item pl-2">
                     <p class="m-0"><a class="" routerLink="/feed">Feed</a></p>
