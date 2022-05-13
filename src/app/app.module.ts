@@ -20,6 +20,8 @@ import { TemaComponent } from './tema/tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { PostagemComponent } from './postagem/postagem.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -38,12 +40,14 @@ import { PostagemComponent } from './postagem/postagem.component';
     FeedComponent,
     MenuUsuarioComponent,
     PostagemComponent,
+    AlertasComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,

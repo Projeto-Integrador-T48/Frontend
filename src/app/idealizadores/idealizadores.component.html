@@ -101,18 +101,18 @@
             <div class="col-md-10">
                 <form class="text-center">
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Nome:</label>
-                        <input type="nome" class="form-control" id="exampleFormControlInput1" placeholder="Seu nome">
+                        <label for="exampleFormControlInput1" id="txtNome">Nome</label>
+                        <input [(ngModel)]="usuario.nome" (input)="validanome()" type="nome" class="form-control nome" id="nome" name="nome" placeholder="Seu nome">
                       </div>
                     <div class="form-group">
-                      <label for="exampleFormControlInput1">Endereço de email:</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+                      <label for="exampleFormControlInput1" id="txtEmail">Endereço de email</label>
+                      <input [(ngModel)]="usuario.usuario" (input)="validaemail()"  type="email" class="form-control email" id="usuario" name= "email" placeholder="nome@exemplo.com">
                     </div>
                     <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Assunto:</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <label for="exampleFormControlTextarea1" id="txtAssunto">Assunto</label>
+                    <textarea (keyup)="validaassunto()" class="form-control" id="assunto" name="assunto" rows="3"></textarea>
                     </div>
-                    <button class="btn btn-violeta">Enviar</button>
+                    <button class="btn btn-violeta"(click)="enviar()">Enviar</button>
                   </form>
                   
             </div>

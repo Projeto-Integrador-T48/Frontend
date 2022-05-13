@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 
 import { AuthService } from '../service/auth.service';
 
@@ -17,8 +18,11 @@ export class CadastrarComponent implements OnInit {
   confirmarSenha:string;
   tipodeUsuario: string
   
-  constructor(private auth: AuthService,
-    private router: Router) { 
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+    private alertas: AlertasService
+    ) { 
   
   }
 
@@ -36,12 +40,12 @@ this.tipodeUsuario = event.target.value
 cadastrar(){
   this.usuario.tipo= this.tipodeUsuario
   if(this.usuario.senha != this.confirmarSenha){
-    alert("As senhas estão incorretas")
+    this.alertas.showAlertDanger("As senhas estão incorretas")
   }else{
     this.auth.cadastrar(this.usuario).subscribe((resp: Usuario) =>{
       this.usuario = resp;
       this.router.navigate(["/entrar"])
-      alert("Usuário cadastrado com sucesso")
+      this.alertas.showAlertSuccess("Usuário cadastrado com sucesso")
     })
   }
 }
@@ -68,7 +72,7 @@ validaEmail() {
     txtEmail.innerHTML = 'Usuário';
     email.style.border = 'solid 1px green';
   } else {
-    txtEmail.innerHTML = 'Usúario Invalido';
+    txtEmail.innerHTML = 'Usuário Invalido';
     email.style.border = 'solid 1px red';
   }
 }
