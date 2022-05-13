@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/Usuario';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -20,7 +21,8 @@ export class UsuarioEditComponent implements OnInit {
   constructor(
     private auth: AuthService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit() {
@@ -77,13 +79,13 @@ export class UsuarioEditComponent implements OnInit {
   atualizar() {
     // this.usuario.tipo = this.tipoDeUsuario;
     if (this.usuario.senha != this.confirmarSenha) {
-      alert('As senhas não são identicas');
+      this.alertas.showAlertDanger('As senhas não são identicas');
     } else { 
       this.usuario.postagem = []     
       this.auth.atualizar(this.usuario).subscribe({
         next: (resp: Usuario) => {
           this.usuario = resp;
-          alert(
+          this.alertas.showAlertSuccess(
             'Usuario atualizado com sucesso! Faça login novamente para validar as alterações'
           );
           this.router.navigate(['/entrar']);
@@ -95,7 +97,7 @@ export class UsuarioEditComponent implements OnInit {
         },
         error: (erro) => {
           if (erro.status == 400) {
-            alert('Preencha todos os campos para atualizar seu usuário');
+            this.alertas.showAlertDanger('Preencha todos os campos para atualizar seu usuário');
           }
         },
       });
