@@ -10,8 +10,37 @@
         </div>
     
         <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3">Editar</a>
-        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger mr-3">Deletar</a>
+        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger mr-3" data-toggle="modal">Deletar</a>
     
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Você tem certeza que deseja apagar essa postagem?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 class="card-title m-0">{{postagem.titulo}}</h5>
+
+        <p class="card-text mt-3">{{postagem.descricao}}</p>
+        <p class="card-text">
+          <small class="text-muted">{{postagem.data | date: 'dd/MM/yyyy'}} às {{postagem.data | date:'HH:mm'}}</small>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger mr-4" routerLink='/inicio' data-dismiss="modal">Não</button>
+        <button class="btn btn-success" (click)='apagar()' data-dismiss="modal">Sim</button>
       </div>
     </div>
   </div>

@@ -20,8 +20,13 @@ import { TemaComponent } from './tema/tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { PostagemComponent } from './postagem/postagem.component';
+<<<<<<< HEAD
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+=======
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+>>>>>>> d07eedc53c49b9a6557b81a3be4e4e1c19989815
 
 @NgModule({
   declarations: [
@@ -40,7 +45,12 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     FeedComponent,
     MenuUsuarioComponent,
     PostagemComponent,
+<<<<<<< HEAD
     AlertasComponent,
+=======
+    TemaEditComponent,
+    TemaDeleteComponent
+>>>>>>> d07eedc53c49b9a6557b81a3be4e4e1c19989815
   ],
   imports: [
     BrowserModule,

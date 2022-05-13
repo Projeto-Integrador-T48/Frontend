@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
+import { PostagemService } from '../service/postagem.service';
 
 @Component({
   selector: 'app-postagem',
@@ -15,9 +17,13 @@ export class PostagemComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUser = environment.id
 
+  postagem: Postagem = new Postagem()
+  idPost: number
+
   constructor(
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private postagemService: PostagemService
   ) { }
 
   ngOnInit() {
@@ -36,6 +42,18 @@ export class PostagemComponent implements OnInit {
   findByIdUser(){
     this.authService.getByIdUser(this.idUser).subscribe((resp:Usuario) => {
       this.usuario = resp
+    })
+  }
+
+  findByIdPostagem(id: number){
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+      this.postagem = resp
+    })
+  }
+
+  apagar(){
+    this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
+      alert('Postagem apagada com sucesso!')
     })
   }
 
