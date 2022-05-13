@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 
 import { AuthService } from '../service/auth.service';
 
@@ -15,10 +16,22 @@ export class CadastrarComponent implements OnInit {
   confirmarSenha: string;
   tipodeUsuario: string;
 
+  usuario: Usuario = new Usuario
+  confirmarSenha:string;
+  tipodeUsuario: string
+  
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+    private alertas: AlertasService
+    ) { 
+  
+=======
   constructor(private auth: AuthService, private router: Router) {}
 
   ngOnInit() {
     window.scroll(0, 0);
+
   }
 
   confirmSenha(event: any) {
@@ -43,6 +56,21 @@ export class CadastrarComponent implements OnInit {
   validaNome() {
     let txtNome = <HTMLLabelElement>document.querySelector('#txtNome');
     let nome = <HTMLInputElement>document.querySelector('#nome');
+
+
+tipoUsuario(event: any){
+this.tipodeUsuario = event.target.value
+}
+cadastrar(){
+  this.usuario.tipo= this.tipodeUsuario
+  if(this.usuario.senha != this.confirmarSenha){
+    this.alertas.showAlertDanger("As senhas estão incorretas")
+  }else{
+    this.auth.cadastrar(this.usuario).subscribe((resp: Usuario) =>{
+      this.usuario = resp;
+      this.router.navigate(["/entrar"])
+      this.alertas.showAlertSuccess("Usuário cadastrado com sucesso")
+    })
 
     if (this.usuario.nome.length < 2) {
       txtNome.innerHTML = 'Digite um nome válido';
@@ -69,6 +97,18 @@ export class CadastrarComponent implements OnInit {
       email.style.border = 'solid 1px #dc3545';
     }
   }
+
+
+validaEmail() {
+  let regex = '[a-z0-9]+@[a-z]+.[a-z]{2,3}';
+  let txtEmail = <HTMLLabelElement>document.querySelector('#txtEmail');
+  let email = <HTMLInputElement>document.querySelector('#usuario');
+  if (this.usuario.usuario.match(regex)) {
+    txtEmail.innerHTML = 'Usuário';
+    email.style.border = 'solid 1px green';
+  } else {
+    txtEmail.innerHTML = 'Usuário Invalido';
+    email.style.border = 'solid 1px red';
 
   validaSenha(){
     let senhaLabel = (<HTMLLabelElement>document.querySelector('#senhaLabel'))
@@ -101,6 +141,7 @@ export class CadastrarComponent implements OnInit {
       senhaInput.style.borderColor = '#dc3545 '
       senhaLabel.innerHTML = 'Senha inválida';
     }
+
 
   }
 }

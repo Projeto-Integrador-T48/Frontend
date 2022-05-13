@@ -20,10 +20,13 @@ import { TemaComponent } from './tema/tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { PostagemComponent } from './postagem/postagem.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+
 
 @NgModule({
   declarations: [
@@ -42,16 +45,19 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     FeedComponent,
     MenuUsuarioComponent,
     PostagemComponent,
+    AlertasComponent,
     TemaEditComponent,
     TemaDeleteComponent,
     PostagemEditComponent,
     UsuarioEditComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,
