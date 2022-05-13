@@ -26,8 +26,7 @@ const routes: Routes = [
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
-  {path: 'usuario-edit/:id', component: UsuarioEditComponent},
-
+  {path: 'usuario-edit/:id', component: UsuarioEditComponent}
 ];
 
 @NgModule({

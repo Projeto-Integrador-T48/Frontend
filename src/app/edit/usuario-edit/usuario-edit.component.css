@@ -25,7 +25,22 @@ input{
 }
 
 .input{
-    border: 2px solid #e5e5e5;
-    border-radius: 5px;
+    border: 1px solid hsla(210, 14%, 89%, 1);
+    border-radius: 0;
 }
 
+.btn-outline-verde{
+    border: 2px solid var(--verde);
+}
+
+.btn-outline-verde:hover{
+    background-color: var(--verde);
+}
+
+.container-fluid{
+    margin-top: 5rem;
+}
+
+i{
+    color: hsla(210, 11%, 71%, 1);
+}
