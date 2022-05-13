@@ -1,3 +1,112 @@
+<div class="container-fluid">
+  <div class="container mb-2">
+    <div class="row">
+
+      <div class="col-md-3 mb-5">
+        <div class="div card d-flex align-content-center p-3">
+          <div class="row d-flex justify-content-center mb-3">
+            <img class="rounded-circle img-fluid b-img" width="100rem" src=""
+              onerror="this.src = '../../assets/img/gravatar.png'">
+          </div>
+          <div class="row d-flex justify-content-center">
+            <h5 class="text-center">Nome</h5>
+          </div>
+          <div class="row d-flex justify-content-center mt-3">
+            <button class="w-100 text-left btn btn-violeta text-cg-50 mx-3 my-1 px-3" data-toggle="modal"
+              data-target="#novaPostagem">
+              <i class="fa fa-plus-square-o text-cg-50 pr-2 " aria-hidden="true"></i> Novo post
+            </button>
+            <button class="w-100 text-left btn btn-violeta text-cg-50 mx-3 my-1 px-3">
+              <i class="fa fa-plus-square-o text-cg-50 pr-2" aria-hidden="true"></i> Cadastrar tema
+            </button>
+            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" routerLink="/minhas-postagens">
+              <i class="fa fa-user-o pr-2 text-violeta" aria-hidden="true"></i> Minhas postagens
+            </button>
+            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" routerLink="/editar-perfil">
+              <i class="fa fa-sliders pr-2 text-violeta" aria-hidden="true"></i> Editar perfil
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--fecha col-md-3-->
+      <div class="col-md-9">       
+        <form>
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Editar perfil</h3>
+            </div>
+          </div>
+
+          <div class="row d-flex mt-4 mb-3">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="nome">Nome:</label>
+                <div class="input d-flex align-items-center">
+                  <i class="fa fa-user-o px-2" aria-hidden="true"></i>
+                  <input type="text" class="form-control" placeholder="Insira seu nome" id="nome">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="email">Email:</label>
+              <div class="input d-flex align-items-center">
+                <i class="fa fa-envelope-o form-control-icon px-2" aria-hidden="true"></i>
+                <input type="text" class="form-control " placeholder="Insira seu email" id="email">
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex mb-3">
+            <div class="col-md-12">
+              <div class="form-group d-flex flex-column">
+                <label for="foto">Foto de perfil</label>
+                <div class="input d-flex align-items-center">
+                  <i class="fa fa-file-image-o px-2" aria-hidden="true"></i>
+                  <input type="text" class="form-control" placeholder="http://imgur.com/foto.png" id="foto">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex mb-3">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="senha">Senha:</label>
+                <div class="input d-flex align-items-center">
+                  <i class="fa fa-lock px-2" aria-hidden="true"></i>
+                  <input type="password" class="form-control" placeholder="Insira sua senha" id="senha">
+                  <i class="fa fa-eye-slash px-2" aria-hidden="true"></i>
+                  <i class="fa fa-eye d-none px-2" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="senha-confirm">Confirmar senha:</label>
+              <div class="input d-flex align-items-center">
+                <i class="fa fa-lock px-2" aria-hidden="true"></i>
+                <input type="password" class="form-control" placeholder="Confirme sua senha" id="senha-confirm">
+                <i class="fa fa-eye-slash px-2" aria-hidden="true"></i>
+                  <i class="fa fa-eye d-none px-2" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5 mb-3">
+            <div class="col-md-12 d-flex">
+              <button class="btn btn-outline-verde w-30 d-block px-5 mr-3 mt-1">Voltar</button>
+              <button class="btn btn-verde w-30 d-block px-5 mt-1">Atualizar</button>
+            </div>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
 <div class="main container-fluid">
   <div class="row">
     <div class="col-md-12">
@@ -48,4 +157,4 @@
     </div>
 
   </div>
-</div>
+</div> -->
