@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+h1, label, input, button{
+    font-family: 'Rubik', sans-serif;
+}
+
+input:focus{
+    box-shadow: none;
+    border: none;
+}
+
+input{
+    color: #e5e5e5;
+}
+
+.main{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.form-control{
+    border: none;
+}
+
+.input{
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+}
+
