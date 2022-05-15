@@ -15,6 +15,7 @@ export class CadastrarComponent implements OnInit {
   usuario: Usuario = new Usuario();
   confirmarSenha: string;
   tipodeUsuario: string;
+  isLoading = false
 
   constructor(
     private auth: AuthService,
@@ -31,16 +32,28 @@ export class CadastrarComponent implements OnInit {
   }
 
   cadastrar() {
+    this.isLoading = true
     this.usuario.tipo = this.tipodeUsuario;
     if (this.usuario.senha != this.confirmarSenha) {
-      this.alertas.showAlertDanger('As senhas estão incorretas');
+      this.alertas.showAlertDanger('As senhas estão incorretas');   
+      this.isLoading = false       
     } else {
-      this.auth.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+      this.auth.cadastrar(this.usuario).subscribe({
+        next:(resp: Usuario) => {
         this.usuario = resp;
         this.router.navigate(['/entrar']);
         this.alertas.showAlertSuccess('Usuário cadastrado com sucesso');
+        },
+        error: (erro) => {
+          if(erro.status == 400)
+         this.alertas.showAlertDanger('Preencha todos os campos antes de fazer um cadastro')
+          this.isLoading = false  
+
+        }
       });
+      
     }
+    // this.isLoading = false
   }
   validaNome() {
     let txtNome = <HTMLLabelElement>document.querySelector('#txtNome');

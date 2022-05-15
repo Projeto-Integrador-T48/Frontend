@@ -28,7 +28,9 @@
   
               <div class="row d-flex justify-content-center py-3">
                 <button class="mr-2 btn" type="button" routerLink="/inicio">Voltar</button>
-                <button (click)='entrar()' type="submit" class="mr-2 btn btn-verde px-4">Entrar</button>
+                <button [disabled]="isLoading == true" (click)='entrar()' type="submit" class="mr-2 btn btn-verde px-4">Entrar
+                  <span *ngIf="isLoading == true" class="spinner-border spinner-border-sm text-dark" role="status" aria-hidden="true"></span>
+                </button>
               </div>
             </div>
           </form>

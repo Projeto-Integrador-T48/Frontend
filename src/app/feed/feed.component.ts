@@ -30,6 +30,10 @@ export class FeedComponent implements OnInit {
   nome = environment.nome
   foto = environment.foto
 
+  key = 'data'
+  reverse = true
+  
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
