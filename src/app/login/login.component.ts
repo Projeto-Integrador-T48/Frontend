@@ -13,6 +13,7 @@ import { AuthService } from '../service/auth.service';
 export class LoginComponent implements OnInit {
 
   usuarioLogin: UsuarioLogin = new UsuarioLogin()
+  isLoading = false
 
   constructor(
     private auth: AuthService,
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
 }
 
   entrar(){
+    this.isLoading = true
     this.auth.entrar(this.usuarioLogin).subscribe({
       next: (resp: UsuarioLogin) => {
         this.usuarioLogin = resp
@@ -39,6 +41,7 @@ export class LoginComponent implements OnInit {
       }, error: erro =>{
         if(erro.status == 401){
           this.alertas.showAlertDanger('Usuário ou senha estão incorretos!')
+          this.isLoading = false
         }
       },
     });
@@ -75,5 +78,6 @@ export class LoginComponent implements OnInit {
       senhaInput.style.borderColor = '#dc3545 '
     }
 
-  }
+  } 
+
 }

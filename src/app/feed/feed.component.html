@@ -42,7 +42,7 @@
 
       <!-- * inicio do Feed -->
       <div class="col-md-9">
-        <div class="row card pt-2 pb-2 mb-4" *ngFor='let item of listaPostagens'>
+        <div class="row card pt-2 pb-2 mb-4" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
           <div class="col-md-12">
             <div class="d-flex flex-column flex-md-row">
               <div class="d-flex align-items-center">
