@@ -1,16 +1,18 @@
 <div class="container-fluid">
-  <div class="container mb-2">
+  <div class="container mt-4">
     <div class="row">
 
       <div class="col-md-3 mb-5">
+
         <div class="div card d-flex align-content-center p-3">
           <div class="row d-flex justify-content-center mb-3">
-            <img class="rounded-circle img-fluid b-img" width="100rem" src="{{foto}}"
-              onerror="this.src = '../../assets/img/gravatar.png'">
+            <img class="rounded-circle img-fluid b-img" width="100rem" src="{{foto}}" onerror="this.src = '../../assets/img/gravatar.png'">
           </div>
+
           <div class="row d-flex justify-content-center">
             <h5 class="text-center">{{nome}}</h5>
           </div>
+          
           <div class="row d-flex justify-content-center mt-3">
             <!-- <button class="w-100 text-left btn btn-violeta text-cg-50 mx-3 my-1 px-3" data-toggle="modal"
               data-target="#novaPostagem">
@@ -22,14 +24,18 @@
             <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" routerLink="/minhas-postagens">
               <i class="fa fa-user-o pr-2 text-violeta" aria-hidden="true"></i> Minhas postagens
             </button>
-            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" routerLink="/editar-perfil">
+            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" [routerLink]="['/usuario-edit', idUser]">
               <i class="fa fa-sliders pr-2 text-violeta" aria-hidden="true"></i> Editar perfil
             </button>
           </div>
         </div>
+
       </div>
       <!--fecha col-md-3-->
-      <div class="col-md-9">       
+
+
+      <div class="col-md-9"> 
+
         <form>
           <div class="row">
             <div class="col-md-12">
@@ -40,18 +46,16 @@
           <div class="row d-flex mt-4 mb-3">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="nome">Nome:</label>
-                <div class="input d-flex align-items-center">
-                  <i class="fa fa-user-o px-2" aria-hidden="true"></i>
-                  <input [(ngModel)]="usuario.nome" type="text" class="form-control" placeholder="Insira seu nome" id="nome" name="nome">
-                </div>
+                <label for="nome">Nome</label>
+                <span class="fa fa-user form-control-icon"></span>
+                <input [(ngModel)]="usuario.nome" type="text" class="form-control" placeholder="Insira seu nome" id="nome" name="nome">
               </div>
             </div>
-
+          
             <div class="col-md-6">
-              <label for="email">Email:</label>
-              <div class="input d-flex align-items-center">
-                <i class="fa fa-envelope-o form-control-icon px-2" aria-hidden="true"></i>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <span class="fa fa-envelope form-control-icon"></span>
                 <input [(ngModel)]="usuario.usuario" type="text" class="form-control " placeholder="Insira seu email" id="email" name="email">
               </div>
             </div>
@@ -59,12 +63,10 @@
 
           <div class="row d-flex mb-3">
             <div class="col-md-12">
-              <div class="form-group d-flex flex-column">
-                <label for="foto">Foto de perfil</label>
-                <div class="input d-flex align-items-center">
-                  <i class="fa fa-file-image-o px-2" aria-hidden="true"></i>
-                  <input [(ngModel)]="usuario.foto" type="text" class="form-control" placeholder="http://imgur.com/foto.png" id="foto" name="foto">
-                </div>
+              <div class="form-group">
+                <label for="foto">Link da foto</label>
+                <span class="fa fa-camera form-control-icon"></span>
+                <input [(ngModel)]="usuario.foto" type="text" class="form-control" placeholder="http://imgur.com/foto.png" id="foto" name="foto">
               </div>
             </div>
           </div>
@@ -72,30 +74,28 @@
           <div class="row d-flex mb-3">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="senha">Senha:</label>
-                <div class="input d-flex align-items-center">
-                  <i class="fa fa-lock px-2" aria-hidden="true"></i>
+                  <label for="senha">Senha:</label>
+                  <span class="fa fa-lock px-2 form-control-icon"></span>
                   <input (input)="confirmSenha($event)" type="password" class="form-control" placeholder="Insira sua senha" id="senha">
-                  <i class="fa fa-eye-slash px-2" aria-hidden="true"></i>
-                  <i class="fa fa-eye d-none px-2" aria-hidden="true"></i>
-                </div>
+                  <!-- <i class="fa fa-eye-slash px-2" aria-hidden="true"></i>
+                  <i class="fa fa-eye d-none px-2" aria-hidden="true"></i> -->
               </div>
             </div>
             <div class="col-md-6">
-              <label for="senha-confirm">Confirmar senha:</label>
-              <div class="input d-flex align-items-center">
-                <i class="fa fa-lock px-2" aria-hidden="true"></i>
+              <div class="form-group">
+                <label for="senha-confirm">Confirmar senha:</label>
+                <span class="fa fa-lock px-2 form-control-icon"></span>
                 <input [(ngModel)]="usuario.senha" type="password" class="form-control" placeholder="Confirme sua senha" id="senha-confirm" name="senha">
-                <i class="fa fa-eye-slash px-2" aria-hidden="true"></i>
-                  <i class="fa fa-eye d-none px-2" aria-hidden="true"></i>
+                <!-- <i class="fa fa-eye-slash px-2" aria-hidden="true"></i>
+                  <i class="fa fa-eye d-none px-2" aria-hidden="true"></i> -->
               </div>
             </div>
           </div>
 
-          <div class="row mt-5 mb-3">
+          <div class="row mt-3">
             <div class="col-md-12 d-flex">
-              <button class="btn btn-outline-verde w-30 d-block px-5 mr-3 mt-1" routerLink="/feed">Voltar</button>
-              <button (click)="atualizar()" class="btn btn-verde w-30 d-block px-5 mt-1">Atualizar</button>
+              <button class="btn btn-outline-verde px-4 mt-1" routerLink="/feed">Voltar</button>
+              <button (click)="atualizar()" class="btn btn-verde px-4 mt-1">Atualizar</button>
             </div>
           </div>
         </form>
