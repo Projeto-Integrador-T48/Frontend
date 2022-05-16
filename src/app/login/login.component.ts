@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/feed'])
 
       }, error: erro =>{
-        if(erro.status == 401){
+        if(erro.status == 401 || this.usuarioLogin.senha == null || this.usuarioLogin.usuario == null){
           this.alertas.showAlertDanger('Usuário ou senha estão incorretos!')
           this.isLoading = false
           this.alterTxtBtn()
