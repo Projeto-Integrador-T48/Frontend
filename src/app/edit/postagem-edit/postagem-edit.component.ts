@@ -66,10 +66,17 @@ export class PostagemEditComponent implements OnInit {
 
     this.postagem.valor = this.valor
 
-    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+    this.postagemService.putPostagem(this.postagem).subscribe({
+      next:(resp: Postagem) => {
       this.postagem = resp
      this.alertas.showAlertSuccess('Postagem atualizada com sucesso!')
       this.router.navigate(['minhas-postagens'])
+      },
+      error: (erro) => {
+        if(erro.status == 500){
+          this.alertas.showAlertInfo('Preencha todos os campos para editar sua postagem')
+        }
+      }
     })
   }
 
