@@ -18,6 +18,8 @@ export class PostagemComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   idPost: number
+  foto = environment.foto
+  nome= environment.nome  
 
   constructor(
     private router: Router,

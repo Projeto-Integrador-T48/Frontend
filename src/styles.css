@@ -185,10 +185,18 @@ html {
   color: var(--cg-50);
 }
 
-/* .btn-violeta:hover{
-  background-color: var(--violeta-h)!important;
-} */
+.btn-violeta:hover{
+  /* background-color: var(--violeta-h)!important; */
+  opacity: 80%;
+}
 
+
+/* BOOTSTRAP BTN OUTLINE*/
+.btn-outline-cg-300{
+  border-color: var(--cg-300)!important;
+  background-color: transparent!important;
+  color: var(--cg-500);
+}
 
 
 

@@ -123,7 +123,7 @@ export class CadastrarComponent implements OnInit {
       senhaLabel.innerHTML = 'Senha inválida';
     }
   }
-
+  
   alterTxtBtn(){
     if(this.isLoading == false){
       this.txtBtn = 'Entrar'
