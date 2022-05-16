@@ -1,46 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+.form-group .form-control {
+    padding-left: 2.375rem;
+  }
 
-h1, label, input, button{
-    font-family: 'Rubik', sans-serif;
-}
-
-input:focus{
-    box-shadow: none;
-    border: none;
-}
-
-input{
-    color: #e5e5e5;
-}
-
-.main{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .form-padding{
+      padding: 0!important;
+  }
+  
+  .form-group .form-control-icon {
     position: absolute;
-}
+    z-index: 2;
+    display: block;
+    width: 2.9rem;
+    height: 2.9rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+  }
 
-.form-control{
-    border: none;
-}
-
-.input{
-    border: 1px solid hsla(210, 14%, 89%, 1);
-    border-radius: 0;
-}
-
-.btn-outline-verde{
-    border: 2px solid var(--verde);
-}
-
-.btn-outline-verde:hover{
-    background-color: var(--verde);
-}
-
-.container-fluid{
-    margin-top: 5rem;
-}
-
-i{
-    color: hsla(210, 11%, 71%, 1);
-}
+  .form-control-icon {
+      color: var(--cg-400);
+  }

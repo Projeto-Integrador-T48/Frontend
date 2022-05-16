@@ -72,7 +72,10 @@
   
               <div class="row d-flex justify-content-center py-3">
                 <button type="button" class="mr-2 btn" routerLink="/entrar">Cancelar</button>
-                <button type="submit" class="btn btn-verde px-4" (click)="cadastrar()">Cadastrar</button>
+                <button [disabled]="isLoading == true" type="submit" class="btn btn-verde px-4" (click)="cadastrar()">Cadastrar
+                  <span *ngIf="isLoading == true" class="spinner-border spinner-border-sm text-dark" role="status" aria-hidden="true"></span>
+                </button>
+                
               </div>
 
             </div>
