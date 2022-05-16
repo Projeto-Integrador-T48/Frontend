@@ -22,6 +22,9 @@
 
     --violeta-25: #E5E2FF;
     --verde-25: #C2F8E2;
+
+    --vermelho: #ffa0a0;
+    --vermelho-forte: #ff0000;
   }
 
 * {
@@ -96,6 +99,9 @@ html {
   color: var(--verde)!important;
 }
 
+.text-vermelho{
+  color:var(--vermelho-forte)!important;
+}
 
 /* BOOTSTRAP BG */
 .bg-cg-50{
@@ -182,6 +188,11 @@ html {
 
 .btn-violeta{
   background-color: var(--violeta)!important;
+  color: var(--cg-50);
+}
+
+.btn-vermelho{
+  background-color: var(--vermelho)!important;
   color: var(--cg-50);
 }
 

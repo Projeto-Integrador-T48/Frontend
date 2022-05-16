@@ -30,6 +30,8 @@
         <div class="form-group">
           <label for="texto">Escolha um tema</label>
           <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+            <!--<option value="{{postagem.tema.id}}" selected>{{postagem.tema.categoria}}</option> -->
+            <option hidden disabled selected>{{postagem.tema.categoria}}</option>
             <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.categoria}}</option>
           </select>
         </div>

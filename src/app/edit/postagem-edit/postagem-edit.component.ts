@@ -19,7 +19,7 @@ export class PostagemEditComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
-  idTema: number
+  idTema: number 
 
   constructor(
     private router: Router,
@@ -43,6 +43,8 @@ export class PostagemEditComponent implements OnInit {
   findByIdPostagem(id: number){
     this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
+      this.idTema = this.postagem.tema.id
+      this.valor = this.postagem.valor
     })
   }
 

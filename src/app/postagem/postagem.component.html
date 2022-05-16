@@ -1,27 +1,32 @@
 <div class="conteiner-fluid">
-  <div class="container">
-    <div class="row card pt-2 pb-2 mb-4" *ngFor='let item of usuario.postagem'>
-      <div class="col-md-12">
-        <div class="d-flex align-items-center">
-            <p class="text-cg-500 mt-3"><i class="fa fa-clock-o  mr-1 text-success" aria-hidden="true"></i> {{item.data | date: 'dd/MM/yyyy'}}</p>
-            <p class="text-cg-500 mt-3"><i class="fa fa-map-marker ml-3 mr-1 text-success" aria-hidden="true"></i> {{item.tema.categoria}}</p>
-            <p class="text-cg-500 mt-3"><i class="fa fa-shopping-bag ml-3 mr-1 text-success" aria-hidden="true"></i> - {{item.valor}}</p>
-        </div>
-        <hr class="mr-0 ml-0">
-        <h5 class="card-title m-0 mb-3">{{item.titulo}}</h5>
-        <ng-container *ngIf="item.foto != null" >
-          <img [src]=item.foto alt=""
-          width="100%"
-          class="img-fluid"
-          onerror="this.src = 'https://portal.crea-sc.org.br/wp-content/uploads/2017/11/imagem-indisponivel-para-produtos-sem-imagem_15_5.jpg'"              
-          >
+  <div class="container d-flex justify-content-center">
+    <div class="col-md-9">
+      <div class="row card pt-2 pb-2 mb-4" *ngFor='let item of usuario.postagem'>
+        <div class="col-md-12">
+          <div class="d-flex align-items-center">
+              <p class="text-cg-500 mt-3"><i class="fa fa-clock-o  mr-1 text-success" aria-hidden="true"></i> {{item.data | date: 'dd/MM/yyyy'}}</p>
+              <p class="text-cg-500 mt-3"><i class="fa fa-map-marker ml-3 mr-1 text-success" aria-hidden="true"></i> {{item.tema.categoria}}</p>
+              <p class="text-cg-500 mt-3"><i class="fa fa-shopping-bag ml-3 mr-1 text-success" aria-hidden="true"></i> - {{item.valor}}</p>
+          </div>
+          <hr class="mr-0 ml-0">
+          <h5 class="card-title m-0 mb-3">{{item.titulo}}</h5>
+          <ng-container *ngIf="item.foto != null" >
+            <img [src]=item.foto alt=""
+            width="100%"
+            class="img-fluid"
+            onerror="this.src = 'https://portal.crea-sc.org.br/wp-content/uploads/2017/11/imagem-indisponivel-para-produtos-sem-imagem_15_5.jpg'"              
+            >
 
-        </ng-container>
-        <p class="card-text mt-3 pb-4">{{item.descricao}}</p>
-        
-        <button [routerLink]="['/postagem-edit', item.id]" class="btn btn-info mr-3">Editar</button>
-        <button (click)="idPostagem(item.id)" class="btn btn-danger mr-3" data-toggle="modal" data-target="#deletaPostagem">Deletar</button>
+          </ng-container>
+          <p class="card-text mt-3 pb-4">{{item.descricao}}</p>
           
+          <hr class="mr-0 ml-0">
+          <div class="d-flex justify-content-around">
+            <button [routerLink]="['/postagem-edit', item.id]" class="btn btn-cg-200 mr-3 text-cg-500"><i class="fa fa-pencil-square-o text-violeta" aria-hidden="true"></i> Editar</button>
+            <button (click)="idPostagem(item.id)" class="btn btn-vermelho mr-3" data-toggle="modal" data-target="#deletaPostagem"><i class="fa fa-trash text-vermelho" aria-hidden="true"></i> Deletar</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
