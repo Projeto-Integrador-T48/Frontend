@@ -30,15 +30,15 @@
         <div class="form-group">
           <label for="texto">Escolha um tema</label>
           <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-            <!--<option value="{{postagem.tema.id}}" selected>{{postagem.tema.categoria}}</option> -->
             
             <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.categoria}}</option>
           </select>
         </div>
 
         <select name="valor" id="valor" class="form-control mt-2" (change)='setValor($event)'>
-          <option hidden disabled selected id="inputValorDefault">Selecione o valor:</option>
           
+          <option hidden disabled selected id="inputValorDefault">Selecione o valor:</option>
+         
           <option value="gratis">Gratuito</option>
           <option value="$">de R$ 1 - R$ 99</option>
           <option value="$$">de R$ 100 - R$ 499</option>
