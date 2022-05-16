@@ -39,19 +39,21 @@ export class CadastrarComponent implements OnInit {
     this.alterTxtBtn()
     this.usuario.tipo = this.tipodeUsuario;
     if (this.usuario.senha != this.confirmarSenha) {
-      this.alertas.showAlertDanger('As senhas estão incorretas');   
-
-      this.isLoading = false       
-    } if(this.usuario.tipo == null) {
+      this.alertas.showAlertDanger('As senhas estão incorretas');  
+      this.isLoading = false    
+      this.alterTxtBtn()     
+    }else if(this.usuario.tipo == null) {
       this.alertas.showAlertDanger('Selecione um tipo de usuário')
       this.isLoading =false;
+      this.alterTxtBtn()
+    }else if(this.usuario.senha == ''){
+      this.alertas.showAlertDanger('Preencha as senhas para cadastrar um usuário')
+      this.isLoading = false
+      this.alterTxtBtn()
     }
     else {
-
-      this.isLoading = false 
-      this.alterTxtBtn()      
-    } else {
-
+      this.isLoading = true
+      this.alterTxtBtn()   
       this.auth.cadastrar(this.usuario).subscribe({
         next:(resp: Usuario) => {
         this.usuario = resp;
@@ -60,20 +62,14 @@ export class CadastrarComponent implements OnInit {
         },
         error: (erro) => {
           if(erro.status == 400 || this.usuario.nome == undefined)
-         this.alertas.showAlertDanger('Preencha todos os campos antes de fazer um cadastro')
+          this.alertas.showAlertDanger('Preencha todos os campos antes de fazer um cadastro')
           this.isLoading = false 
-
-
           this.alterTxtBtn()
-
-
         }
-
-      });
-      
-    }
-    // this.isLoading = false
+      });      
+    }    
   }
+
   validaNome() {
     let txtNome = <HTMLLabelElement>document.querySelector('#txtNome');
     let nome = <HTMLInputElement>document.querySelector('#nome');
