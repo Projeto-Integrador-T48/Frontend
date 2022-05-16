@@ -47,7 +47,7 @@ export class FeedComponent implements OnInit {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      this.alertas.showAlertDanger('Sua seção expirou, faça o login novamente.')
+      this.alertas.showAlertDanger('Sua sessão expirou, faça o login novamente.')
       this.router.navigate(['/inicio'])
     }
 
@@ -97,7 +97,7 @@ export class FeedComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
