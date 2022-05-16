@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   usuarioLogin: UsuarioLogin = new UsuarioLogin()
   isLoading = false
+  txtBtn: string
 
   constructor(
     private auth: AuthService,
@@ -23,10 +24,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
+    this.alterTxtBtn()
 }
 
   entrar(){
     this.isLoading = true
+    this.alterTxtBtn()
     this.auth.entrar(this.usuarioLogin).subscribe({
       next: (resp: UsuarioLogin) => {
         this.usuarioLogin = resp
@@ -42,6 +45,7 @@ export class LoginComponent implements OnInit {
         if(erro.status == 401){
           this.alertas.showAlertDanger('Usuário ou senha estão incorretos!')
           this.isLoading = false
+          this.alterTxtBtn()
         }
       },
     });
@@ -78,6 +82,14 @@ export class LoginComponent implements OnInit {
       senhaInput.style.borderColor = '#dc3545 '
     }
 
-  } 
+  }
+  
+  alterTxtBtn(){
+    if(this.isLoading == false){
+      this.txtBtn = 'Entrar'
+    }else{
+      this.txtBtn = 'Carregando'
+    }
+  }
 
 }
