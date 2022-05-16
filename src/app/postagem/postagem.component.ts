@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-postagem',
@@ -25,13 +26,14 @@ export class PostagemComponent implements OnInit {
     private router: Router,
     private authService: AuthService,
     private postagemService: PostagemService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      alert('Sua seção expirou, faça o login novamente.')
+     this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente.')
       this.router.navigate(['/inicio'])
     }
 
@@ -60,7 +62,7 @@ export class PostagemComponent implements OnInit {
 
   apagar(){
     this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
-      alert('Postagem apagada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem apagada com sucesso!')
       this.findByIdUser()
       //this.router.navigate['/minhas-postagens']
     })
