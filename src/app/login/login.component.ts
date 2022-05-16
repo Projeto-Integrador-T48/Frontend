@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UsuarioLogin } from '../model/UsuarioLogin';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -12,10 +13,12 @@ import { AuthService } from '../service/auth.service';
 export class LoginComponent implements OnInit {
 
   usuarioLogin: UsuarioLogin = new UsuarioLogin()
+  isLoading = false
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
@@ -23,6 +26,7 @@ export class LoginComponent implements OnInit {
 }
 
   entrar(){
+    this.isLoading = true
     this.auth.entrar(this.usuarioLogin).subscribe({
       next: (resp: UsuarioLogin) => {
         this.usuarioLogin = resp
@@ -36,7 +40,8 @@ export class LoginComponent implements OnInit {
 
       }, error: erro =>{
         if(erro.status == 401){
-          alert('Usuário ou senha estão incorretos!')
+          this.alertas.showAlertDanger('Usuário ou senha estão incorretos!')
+          this.isLoading = false
         }
       },
     });
@@ -48,13 +53,13 @@ export class LoginComponent implements OnInit {
 
     let regex = "[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
     if(this.usuarioLogin.usuario.match(regex)){
-      emailLabel.innerHTML = 'Email'
-      emailLabel.style.color = '#03BB85'
-      emailInput.style.borderColor = '#03BB85'
+      emailLabel.innerHTML = 'Email válido'
+      emailLabel.style.color = '#198754'
+      emailInput.style.borderColor = '#198754'
     }else{
       emailLabel.innerHTML = 'Usuário precisa ser um email válido'
-      emailLabel.style.color = 'red'
-      emailInput.style.borderColor = 'red'
+      emailLabel.style.color = '#dc3545'
+      emailInput.style.borderColor = '#dc3545'
     }
   }
 
@@ -62,14 +67,17 @@ export class LoginComponent implements OnInit {
     let senhaLabel = (<HTMLLabelElement>document.querySelector('#senhaLabel'))
     let senhaInput = (<HTMLInputElement>document.querySelector('#senhaInput'))
 
-    if(senhaInput.value.length > 0){
-      senhaLabel.style.color = '#03BB85'
-      senhaInput.style.borderColor = '#03BB85'
+    if(senhaInput.value.length > 4){
+      senhaLabel.innerHTML = 'Senha válida'
+      senhaLabel.style.color = '#198754'
+      senhaInput.style.borderColor = '#198754'
       
     }else{
-      senhaLabel.style.color = 'red'
-      senhaInput.style.borderColor = 'red'
+      senhaLabel.innerHTML = 'Senha inválida'
+      senhaLabel.style.color = '#dc3545'
+      senhaInput.style.borderColor = '#dc3545 '
     }
 
-  }
+  } 
+
 }

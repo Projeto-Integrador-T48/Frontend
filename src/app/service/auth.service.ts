@@ -36,6 +36,10 @@ export class AuthService {
     );
   }
 
+  atualizar(usuario: Usuario):Observable<Usuario>{
+    return this.http.put<Usuario>(`https://conectagen.herokuapp.com/usuario/atualizar`, usuario, this.token)
+  }
+
   getByIdUser(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`https://conectagen.herokuapp.com/usuario/${id}`, this.token)
   }

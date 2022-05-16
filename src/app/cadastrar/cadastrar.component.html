@@ -1,62 +1,88 @@
 <div class="container-fluid">
-
   <div class="row">
-    <div class="col-md-6" id="bg-img"></div>
+    <div class="col-md-6 img-fluid" id="bg-img"></div>
 
-    <div class="col-md-6 mt-5 mb-5  d-flex justify-content-center align-items-center">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-12">
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-10">
 
-          <h1 class="text-center">Cadastro</h1>
-          <div class="form-group">
-            <label for="Nome" id="txtNome">Nome</label>
-            <span class="fa fa-user form-control-icon"></span>
-            <input [(ngModel)]="usuario.nome" (input)="validaNome()" class="form-control" type="text" name="nome"
-              id="nome" placeholder="Seu nome">
-          </div>
-          <div class="form-group">
-            <label for="usuario" id="txtEmail">Usuário</label>
-            <span class="fa fa-envelope form-control-icon"></span>
-            <input [(ngModel)]="usuario.usuario" (input)="validaEmail()" class="form-control" type="text" name="usuario"
-              id="usuario" placeholder="Seu usuário">
-          </div>
-          <div class="form-group">
-            <label for="foto">Link da foto</label>
-            <span class="fa fa-picture-o form-control-icon"></span>
-            <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
-              placeholder="Link da sua foto">
-          </div>
-          <div class="form-group">
-            <label for="senha">Senha</label>
-            <span class="fa fa-lock form-control-icon"></span>
-            <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha"
-              placeholder="Sua senha">
-          </div>
+          <h1 class="mb-3 text-center">Cadastro</h1>
+          <p class="text-center">Faça sua conta e participe da comunidade<br> e plataforma ConectaGen!</p>
+          
+          <form action="">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nome" id="txtNome">Nome</label>
+                  <span class="fa fa-user form-control-icon"></span>
+                  <input [(ngModel)]="usuario.nome" (input)="validaNome()" class="form-control" type="text" name="nome"
+                    id="nome" placeholder="Seu nome">
+                </div>    
+              </div>
+  
+              <div class="col-md-6">    
+                <div class="form-group">
+                  <label for="usuario" id="txtEmail">Email</label>
+                  <span class="fa fa-envelope form-control-icon"></span>
+                  <input [(ngModel)]="usuario.usuario" (input)="validaEmail()" class="form-control" type="text" name="usuario"
+                    id="usuario" placeholder="Insira um email válido">
+                </div>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <label for="confirmaSenha">Confirmar senha</label>
-            <span class="fa fa-lock form-control-icon"></span>
-            <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmaSenha"
-              id="confirmaSenha" placeholder="Confirme sua senha">
-          </div>
-          <div class="form-group">
-            <label for="tipo">Tipo de usuário</label>
-            <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
-              <option>Selecione um tipo de usuário:</option>
-              <option value="entreterimento">Entreterimento</option>
-              <option value="negocio">Negócios</option>
-            </select>
-          </div>
-   
-          <p class="text-center fs-10 mt-3 font-bold pt-4">Ainda não tem uma conta? <a routerLink="/cadastrar">cadastre-se</a></p>
+            <div class="form-group">
+              <label for="foto">Link da foto</label>
+              <span class="fa fa-camera form-control-icon"></span>
+              <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
+                placeholder="Link da sua foto">
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="senha" id="senhaLabel">Senha</label>
+                  <span class="fa fa-lock form-control-icon"></span>
+                  <input (input)="confirmSenha($event)" (keyup)='validaSenha()' class="form-control" type="password" name="senha" id="senha"
+                    placeholder="Sua senha">
+                </div>
+              </div>
 
-          <hr />
+              <div class="col-md-6">  
+                <div class="form-group">
+                  <label for="confirmaSenha" id="senhaLabel2">Confirmar senha</label>
+                  <span class="fa fa-lock form-control-icon"></span>
+                  <input (keyup)='validaConfirmaSenha()' [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmaSenha"
+                    id="confirmaSenha" placeholder="Confirme sua senha">
+                </div>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="tipo">Tipo de usuário</label>
+              <span class="fa fa-chevron-circle-right form-control-icon"></span>
+              <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
+                <option selected disabled>Selecione um tipo de usuário:</option>
+                <option value="colaborador">Colaborador</option>
+                <option value="parceiros">Parceiro</option>
+              </select>
+  
+              <p class="text-center fs-10 mt-3 pt-4 small">Já possui uma conta? Faça o <a routerLink="/entrar">login</a></p>
+  
+              <hr />
+  
+              <div class="row d-flex justify-content-center py-3">
+                <button type="button" class="mr-2 btn" routerLink="/entrar">Cancelar</button>
+                <button [disabled]="isLoading == true" type="submit" class="btn btn-verde px-4" (click)="cadastrar()">Cadastrar
+                  <span *ngIf="isLoading == true" class="spinner-border spinner-border-sm text-dark" role="status" aria-hidden="true"></span>
+                </button>
+                
+              </div>
 
-          <div class="row d-flex justify-content-center py-3">
-          <button type="button" class="mr-4 btn btn-danger" routerLink="/entrar">Cancelar</button>
-          <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
+            </div>
+          </form>
+          
         </div>
       </div>
-
     </div>
   </div>
+</div>
