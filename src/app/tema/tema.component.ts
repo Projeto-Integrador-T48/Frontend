@@ -36,11 +36,18 @@ export class TemaComponent implements OnInit {
     })
   }
   cadastrar(){
-    this.temaService.postTema(this.tema).subscribe((resp: Tema)=>{
+    this.temaService.postTema(this.tema).subscribe({
+      next:(resp: Tema)=>{
       this.tema = resp
       this.alertas.showAlertSuccess('Tema cadastrado com sucesso!')
       this.findAllTemas()
       this.tema = new Tema()
+      },
+      error: (erro) => {
+        if(erro.status == 400){
+          this.alertas.showAlertDanger('O tema que você está tentando cadastrar já existe!')
+        }
+      }
     });
   }
 }

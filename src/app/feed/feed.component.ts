@@ -95,11 +95,18 @@ export class FeedComponent implements OnInit {
 
     this.postagem.valor = this.valor
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+    this.postagemService.postPostagem(this.postagem).subscribe({
+      next:(resp: Postagem) => {
       this.postagem = resp
       this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
+      },
+      error: (erro) => {
+        if(erro.status == 400){
+          this.alertas.showAlertDanger('Preencha todos os campos corretamente para realizar uma postagem')
+        }
+      }
     })
 
   }
