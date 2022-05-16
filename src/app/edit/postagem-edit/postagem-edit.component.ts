@@ -20,7 +20,7 @@ export class PostagemEditComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
-  idTema: number
+  idTema: number 
 
   constructor(
     private router: Router,
@@ -45,6 +45,44 @@ export class PostagemEditComponent implements OnInit {
   findByIdPostagem(id: number){
     this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
+      this.idTema = this.postagem.tema.id
+      this.valor = this.postagem.valor
+      
+      let inputValor = (<HTMLInputElement>document.querySelector('#inputValorDefault'))
+
+      switch (this.valor) {
+        
+        case "gratis":
+
+          inputValor.innerText = "Gratuito"
+
+          break;
+
+        case "$":
+
+          inputValor.innerText = "de R$ 1 - R$ 99"
+
+          break;
+
+        case "$$":
+
+          inputValor.innerText = "de R$ 100 - R$ 499"
+
+          break;
+
+        case "$$$":
+
+          inputValor.innerText = "Acima de R$ 500"
+
+          break;
+      
+        default:
+
+          inputValor.innerText = "Selecione o valor"
+
+          break;
+      }
+
     })
   }
 

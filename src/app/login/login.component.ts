@@ -55,21 +55,27 @@ export class LoginComponent implements OnInit {
     let emailLabel = (<HTMLLabelElement>document.querySelector('#emailLabel'))
     let emailInput = (<HTMLInputElement>document.querySelector('#emailInput'))
 
+    emailInput.style.boxShadow = "0 0 0 0"
+
     let regex = "[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
     if(this.usuarioLogin.usuario.match(regex)){
       emailLabel.innerHTML = 'Email válido'
       emailLabel.style.color = '#198754'
       emailInput.style.borderColor = '#198754'
+      
     }else{
       emailLabel.innerHTML = 'Usuário precisa ser um email válido'
       emailLabel.style.color = '#dc3545'
       emailInput.style.borderColor = '#dc3545'
+      
     }
   }
 
   validaSenha(){
     let senhaLabel = (<HTMLLabelElement>document.querySelector('#senhaLabel'))
     let senhaInput = (<HTMLInputElement>document.querySelector('#senhaInput'))
+
+    senhaInput.style.boxShadow = "0 0 0 0"
 
     if(senhaInput.value.length > 4){
       senhaLabel.innerHTML = 'Senha válida'
