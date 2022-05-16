@@ -123,7 +123,11 @@ export class CadastrarComponent implements OnInit {
       senhaLabel.innerHTML = 'Senha inválida';
     }
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> f21dbacbe9a7127a1bf52d7160cb24e3ea07a613
   alterTxtBtn(){
     if(this.isLoading == false){
       this.txtBtn = 'Entrar'
@@ -131,4 +135,8 @@ export class CadastrarComponent implements OnInit {
       this.txtBtn = 'Carregando'
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f21dbacbe9a7127a1bf52d7160cb24e3ea07a613
