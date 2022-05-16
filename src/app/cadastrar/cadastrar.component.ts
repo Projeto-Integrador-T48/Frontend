@@ -17,6 +17,7 @@ export class CadastrarComponent implements OnInit {
   confirmarSenha: string;
   tipodeUsuario: string;
   isLoading = false
+  txtBtn: string
 
   constructor(
     private auth: AuthService,
@@ -26,6 +27,7 @@ export class CadastrarComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
+    this.alterTxtBtn()
   }
 
   confirmSenha(event: any) {
@@ -34,15 +36,22 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar() {
     this.isLoading = true
+    this.alterTxtBtn()
     this.usuario.tipo = this.tipodeUsuario;
     if (this.usuario.senha != this.confirmarSenha) {
       this.alertas.showAlertDanger('As senhas estão incorretas');   
+
       this.isLoading = false       
     } if(this.usuario.tipo == null) {
       this.alertas.showAlertDanger('Selecione um tipo de usuário')
       this.isLoading =false;
     }
     else {
+
+      this.isLoading = false 
+      this.alterTxtBtn()      
+    } else {
+
       this.auth.cadastrar(this.usuario).subscribe({
         next:(resp: Usuario) => {
         this.usuario = resp;
@@ -52,7 +61,12 @@ export class CadastrarComponent implements OnInit {
         error: (erro) => {
           if(erro.status == 400 || this.usuario.nome == undefined)
          this.alertas.showAlertDanger('Preencha todos os campos antes de fazer um cadastro')
-          this.isLoading = false  
+          this.isLoading = false 
+
+
+          this.alterTxtBtn()
+
+
         }
 
       });
@@ -64,14 +78,14 @@ export class CadastrarComponent implements OnInit {
     let txtNome = <HTMLLabelElement>document.querySelector('#txtNome');
     let nome = <HTMLInputElement>document.querySelector('#nome');
 
-    if (nome.value.length > 0) {
+    if (nome.value.length >= 2) {
       txtNome.style.color = '#198754';
       nome.style.borderColor = '#198754';
-      txtNome.innerHTML = 'Senha válida';
+      txtNome.innerHTML = 'Nome válido';
     } else {
       txtNome.style.color = '#dc3545';
       nome.style.borderColor = '#dc3545 ';
-      txtNome.innerHTML = 'Senha inválida';
+      txtNome.innerHTML = 'Nome inválido';
     }
   }
 
@@ -127,6 +141,14 @@ export class CadastrarComponent implements OnInit {
       senhaLabel.style.color = '#dc3545';
       senhaInput.style.borderColor = '#dc3545 ';
       senhaLabel.innerHTML = 'Senhas diferentes';
+    }
+  }
+  
+  alterTxtBtn(){
+    if(this.isLoading == false){
+      this.txtBtn = 'Cadastrar'
+    }else{
+      this.txtBtn = 'Carregando'
     }
   }
 }
