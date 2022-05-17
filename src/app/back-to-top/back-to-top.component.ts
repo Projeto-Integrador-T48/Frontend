@@ -13,5 +13,6 @@ export class BackToTopComponent implements OnInit {
   }
 
   backToTop() {
+    window.scroll(0, 0)
   }
 }
