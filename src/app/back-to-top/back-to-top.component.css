@@ -1,0 +1,7 @@
+button{
+    width: 40px;
+}
+
+button:focus{
+    box-shadow: none;
+}
