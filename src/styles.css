@@ -32,9 +32,9 @@
     color: var(--cg-800);
 }
 
-html {
-    scroll-behavior: smooth;
-  }
+html { 
+  scroll-behavior: smooth; 
+}
 
 .py-100{
   padding: 12rem 0;
@@ -137,10 +137,16 @@ html {
   background-color: var(--cg-100)!important;
   color: var(--cg-500);
 }
+.btn-cg-100:hover{
+  opacity: 80%;
+}
 
 .btn-cg-200{
   background-color: var(--cg-200)!important;
   color: var(--cg-500);
+}
+.btn-cg-200:hover{
+  opacity: 80%;
 }
 
 .btn-cg-300{
@@ -179,10 +185,11 @@ html {
 }
 
 .btn-verde{
+  border-color: var(--verde)!important;
   background-color: var(--verde)!important;
-  color: var(--cg-50);
 }
 .btn-verde:hover{
+  border-color: var(--verde-25)!important;
   background-color: var(--verde-25)!important;
 }
 
@@ -191,20 +198,46 @@ html {
   color: var(--cg-50);
 }
 
+.btn-violeta:hover{
+  opacity: 80%;
+}
+
 .btn-vermelho{
   background-color: var(--vermelho)!important;
   color: var(--cg-50);
 }
 
-.btn-violeta:hover{
-  opacity: 80%;
-}
 
 /* BOOTSTRAP BTN OUTLINE*/
+.btn-outline-cg-100{
+  border-color: var(--cg-100)!important;
+}
+.btn-outline-cg-100:hover{
+  background-color: var(--cg-100)!important;
+  border-color: var(--cg-100)!important;
+}
+
+.btn-outline-cg-200{
+  border-color: var(--cg-200)!important;
+}
+.btn-outline-cg-200:hover{
+  border-color: var(--cg-200)!important;
+  background-color: var(--cg-200)!important;
+}
+
 .btn-outline-cg-300{
   border-color: var(--cg-300)!important;
   background-color: transparent!important;
   color: var(--cg-500);
+}
+
+.btn-outline-verde{
+  border-color: var(--verde)!important;
+}
+
+.btn-outline-verde:hover{
+  border-color: var(--verde)!important;
+  background-color: var(--verde)!important;
 }
 
 #bg-img{
@@ -228,6 +261,10 @@ html {
   font-size: 2rem;
   color: var(--violeta);
   font-weight: 600;
+}
+
+.vh-1080 {
+  min-height: 68vh;
 }
 
 /* Scrollbar styles */
