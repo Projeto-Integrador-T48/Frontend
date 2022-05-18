@@ -50,11 +50,11 @@
               </div>
               <hr class="mr-0 ml-0">
               <h5 class="card-title m-0 mb-3">{{item.titulo}}</h5>
-              <ng-container *ngIf="item.foto != null" >
+              <ng-container *ngIf="item.foto != '' && item.foto != null">
                 <img [src]=item.foto alt=""
                 width="100%"
                 class="img-fluid"
-                onerror="this.src = '../../assets/img/gravatar.png'"              
+                onerror="this.src = 'assets/img/gravatarPostagem.png'"              
                 >
       
               </ng-container>
