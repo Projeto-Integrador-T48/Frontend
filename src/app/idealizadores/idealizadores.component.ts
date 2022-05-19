@@ -25,6 +25,8 @@ export class IdealizadoresComponent implements OnInit {
     let txtNome = <HTMLLabelElement>document.querySelector('#txtNome');
     let nome = <HTMLInputElement>document.querySelector('#nome');
 
+    nome.style.boxShadow = "0 0 0 0"
+
     if(this.usuario.nome.length < 2){
       txtNome.innerHTML = 'Digite um nome válido';
       txtNome.style.color = 'red';
@@ -43,6 +45,9 @@ export class IdealizadoresComponent implements OnInit {
     let regex = '[a-z0-9]+@[a-z]+.[a-z]{2,3}';
     let txtEmail = <HTMLLabelElement>document.querySelector('#txtEmail');
     let email = <HTMLInputElement>document.querySelector('#usuario');
+
+    email.style.boxShadow = "0 0 0 0"
+
     if (this.usuario.usuario.match(regex)) {
       txtEmail.innerHTML = 'e-mail';
       txtEmail.style.color = 'black';
@@ -59,6 +64,9 @@ export class IdealizadoresComponent implements OnInit {
   validaassunto(){
         let txtassunto = <HTMLLabelElement>document.querySelector('#txtAssunto')
         let assunto = <HTMLTextAreaElement>document.querySelector('#assunto')
+
+        assunto.style.boxShadow = "0 0 0 0"
+
         if(assunto.value.length < 2){
           txtassunto.innerHTML = 'assunto';
           txtassunto.style.color = 'red';

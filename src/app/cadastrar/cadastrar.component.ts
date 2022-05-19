@@ -74,6 +74,8 @@ export class CadastrarComponent implements OnInit {
     let txtNome = <HTMLLabelElement>document.querySelector('#txtNome');
     let nome = <HTMLInputElement>document.querySelector('#nome');
 
+    nome.style.boxShadow = "0 0 0 0"
+
     if (nome.value.length >= 2) {
       txtNome.style.color = '#198754';
       nome.style.borderColor = '#198754';
@@ -93,6 +95,9 @@ export class CadastrarComponent implements OnInit {
     let regex = '[a-z0-9]+@[a-z]+.[a-z]{2,3}';
     let txtEmail = <HTMLLabelElement>document.querySelector('#txtEmail');
     let email = <HTMLInputElement>document.querySelector('#usuario');
+
+    email.style.boxShadow = "0 0 0 0"
+
     if (this.usuario.usuario.match(regex)) {
       txtEmail.innerHTML = 'Email válido';
       txtEmail.style.color = '#198754';
@@ -108,6 +113,8 @@ export class CadastrarComponent implements OnInit {
     let senhaLabel = <HTMLLabelElement>document.querySelector('#senhaLabel');
     let senhaInput = <HTMLInputElement>document.querySelector('#senha');
     let aviso = <HTMLSpanElement>document.querySelector('#aviso')
+
+    senhaInput.style.boxShadow = "0 0 0 0"
 
     if (senhaInput.value.length > 4) {
       senhaLabel.style.color = '#198754';
@@ -128,6 +135,8 @@ export class CadastrarComponent implements OnInit {
     let senhaLabel = <HTMLLabelElement>document.querySelector('#senhaLabel2');
     let senhaInput = <HTMLInputElement>document.querySelector('#confirmaSenha');
     this.usuario.tipo = this.tipodeUsuario;
+
+    senhaInput.style.boxShadow = "0 0 0 0"
     
     if (senhaInput.value.length > 4 && this.usuario.senha == this.confirmarSenha ) {
       senhaLabel.style.color = '#198754';
