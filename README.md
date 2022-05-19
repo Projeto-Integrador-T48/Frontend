@@ -52,7 +52,8 @@
 <h3> Back-end</h3>
 <p>Você pode ver a documentação do back-end e testar a api através do swagger do projeto no heroku clicando <a href="https://conectagen.herokuapp.com/">aqui</a>.</p>
 <p> Para acessar utilize o usuario: root e senha: root </p>
-<p> Para acessar utilize o usuario: root e senha: root </p>
+
+
 
 <h3> Front-end</h3>
 <p>Você pode acessar o nosso front-end que está hospedado no <em>netlify<em> e testar nossa aplicação clicando <a href="https://conectagen.netlify.app/#/inicio">aqui</a>.</p>
