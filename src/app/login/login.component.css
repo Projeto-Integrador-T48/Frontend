@@ -33,6 +33,10 @@ a:hover {
   pointer-events: none;
 }
 
+.form-control-icon {
+  color: var(--cg-400);
+}
+
 /* .font-bolder {
   font-weight: bolder;
 }

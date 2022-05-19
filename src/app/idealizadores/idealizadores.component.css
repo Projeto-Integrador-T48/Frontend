@@ -18,6 +18,10 @@
     pointer-events: none;
   }
 
+  .form-control-icon {
+    color: var(--cg-400);
+}
 
-
-  
+textarea{
+  padding-left: 12px!important;
+}

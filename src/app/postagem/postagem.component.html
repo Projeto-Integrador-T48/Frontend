@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="container mt-4">
+  <div class="container vh-1080 my-5">
     <div class="row">
 
       <div class="col-md-3 mb-5">
@@ -21,10 +21,10 @@
             <button class="w-100 text-left btn btn-violeta text-cg-50 mx-3 my-1 px-3">
               <i class="fa fa-plus-square-o text-cg-50 pr-2" aria-hidden="true"></i> Cadastrar tema
             </button> -->
-            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" routerLink="/minhas-postagens">
+            <button class="w-100 text-left btn btn-cg-100 text-cg-600 mx-3 my-1 px-3 disabled" routerLink="/minhas-postagens">
               <i class="fa fa-user-o pr-2 text-violeta" aria-hidden="true"></i> Minhas postagens
             </button>
-            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" [routerLink]="['/usuario-edit', idUser]">
+            <button class="w-100 text-left btn btn-cg-100 text-cg-600 mx-3 my-1 px-3" [routerLink]="['/usuario-edit', idUser]">
               <i class="fa fa-sliders pr-2 text-violeta" aria-hidden="true"></i> Editar perfil
             </button>
           </div>
@@ -61,9 +61,9 @@
               <p class="card-text mt-3 pb-4">{{item.descricao}}</p>
               
               <hr class="mr-0 ml-0">
-              <div class="d-flex justify-content-around">
-                <button [routerLink]="['/postagem-edit', item.id]" class="btn btn-cg-200 mr-3 text-cg-500"><i class="fa fa-pencil-square-o text-violeta" aria-hidden="true"></i> Editar</button>
-                <button (click)="idPostagem(item.id)" class="btn btn-vermelho mr-3" data-toggle="modal" data-target="#deletaPostagem"><i class="fa fa-trash text-vermelho" aria-hidden="true"></i> Deletar</button>
+              <div class="d-flex justify-content-start mb-1">
+                <button (click)="idPostagem(item.id)" class="btn btn-outline-danger px-4 mr-3" data-toggle="modal" data-target="#deletaPostagem"><!-- <i class="fa fa-trash text-vermelho" aria-hidden="true"></i>  -->Deletar</button>
+                <button [routerLink]="['/postagem-edit', item.id]" class="btn btn-success px-4 mr-3"><!-- <i class="fa fa-pencil-square-o text-violeta" aria-hidden="true"></i>  -->Editar</button>
               </div>
                 
           </div>
@@ -94,8 +94,8 @@
         </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-danger mr-4" routerLink='/minhas-postagens' data-dismiss="modal">Não</button>
-        <button class="btn btn-success" (click)='apagar()' data-dismiss="modal">Sim</button>
+        <button class="btn btn-outline-danger px-4 mr-2" routerLink='/minhas-postagens' data-dismiss="modal">Não</button>
+        <button class="btn btn-success px-4 " (click)='apagar()' data-dismiss="modal">Sim</button>
       </div>
     </div>
   </div>
