@@ -1,5 +1,5 @@
 <p align="center">
- <a href="https://conectagen.netlify.app/#/inicio"><img src="" alt="../Frontend/src/assets/img/ConectaGenPreview.png" height="150px" width="300px">
+ <a href="https://conectagen.netlify.app/#/inicio"><img src="https://i.imgur.com/x3NdCab.png" alt="" height="150px" width="300px">
   
 </p>
 <h1 align="center">ConectaGen</h1>
