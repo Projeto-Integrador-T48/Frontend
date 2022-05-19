@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BackToTopComponent } from './back-to-top/back-to-top.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'feed', component: FeedComponent},
   {path: 'menu-usuario', component: MenuUsuarioComponent},
   {path: 'minhas-postagens', component: PostagemComponent},
+  {path: 'back-to-top', component: BackToTopComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
