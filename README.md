@@ -95,7 +95,7 @@
       <a href="https://www.linkedin.com/in/leticiapaoleschi/"><p>Letícia Paoleschi</p></a>
     </td>
     <td>
-      <a href="https://github.com/MatheusMSF"><img src="../Frontend/src/assets/img/dev-matheus.png" width="120px;" height="120px;"></a>
+      <a href="https://github.com/MatheusMSF"><img src="https://i.imgur.com/3vxbZtY.png" width="120px;" height="120px;"></a>
       <a href="https://www.linkedin.com/in/matheus-ferreira-317b98231/"><p>Matheus Ferreira</p></a>
     </td>
     <td>
