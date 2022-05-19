@@ -18,7 +18,7 @@
   O projeto foi pautado a partir da ODS 8 da ONU que tem como intuito promover um turismo econômico e sustentável. Dessa forma, o Conecta surgiu com o objetivo de interligar pessoas com pequenos estabelecimentos de turismo e cultura em diversas regiões do Brasil.
 
 <p>
-  Este projeto foi acompanhado pelos instrutores  <a href="https://www.linkedin.com/in/anderson-mendon%C3%A7a-de-abreu-11179a85/">Anderson Mendonça de Abreu,  <a href= "https://www.linkedin.com/in/jessica-lopes-teodozio/">Jessica Lopes</a>, <a href="https://www.linkedin.com/in/thiago-faccipieri/">Thiago Faccipieri</a> e <a href="https://www.linkedin.com/in/aimeezita/">Aimee Thompson</a> que nós ajudaram a colocar em prática os conhecimentos de backend e frontend em nosso Projeto Integrador do grupo 3 da turma 48 da <a href="https://brazil.generation.org/">Generation Brasil</a>. 
+  Este projeto foi acompanhado pelos instrutores  <a href="https://www.linkedin.com/in/anderson-mendon%C3%A7a-de-abreu-11179a85/">Anderson Mendonça de Abreu,  <a href= "https://www.linkedin.com/in/jessica-lopes-teodozio/">Jessica Lopes</a>, <a href="https://www.linkedin.com/in/thiago-faccipieri/">Thiago Faccipieri</a> e <a href="https://www.linkedin.com/in/aimeezita/">Aimee Thompson</a> que nos guiaram durante a jornada de desenvolvimento colocando em pratica todos os conhecimentos de backend e frontend adquiridos durante o bootcamp em nosso Projeto Integrador.  
 </p>
 <h3> Acesse a ConectaGen por aqui: <a href="https://conectagen.netlify.app/#/inicio">Projeto ConectaGen</a> </h3>
 
