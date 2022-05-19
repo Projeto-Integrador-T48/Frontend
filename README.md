@@ -79,27 +79,27 @@
 <table>
   <tr>
     <td>
-      <a href="https://github.com/EduardaMatias"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQFCVuyzj05pIw/profile-displayphoto-shrink_200_200/0/1652291078927?e=1658361600&v=beta&t=ClrCBw7N87R0kvGNo5IDeF4dczM8A7vFgqwdOg6K7HE" width="120px;" height="120px;"></a>  
+      <a href="https://github.com/EduardaMatias"><img src="https://conectagen.netlify.app/assets/img/dev-duda.png" width="120px;" height="120px;"></a>  
       <a href="https://www.linkedin.com/in/eduarda-matias-8843481b8/"><p>Eduarda Matias</p></a>
     </td>
     <td>
-      <a href="https://github.com/Fernando-Oliver"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQFTVwTfXIo--Q/profile-displayphoto-shrink_800_800/0/1645578595823?e=1658361600&v=beta&t=5asQ6n9lnWCTOZPXPFjbHWyAXp_7lmTv01BkpCYIuOc" width="120px;" height="120px;"></a>
+      <a href="https://github.com/Fernando-Oliver"><img src="https://conectagen.netlify.app/assets/img/dev-fernando.png" width="120px;" height="120px;"></a>
       <a href="https://www.linkedin.com/in/fernando-oliveira-255b64174/"><p>Fernando Oliveira</p></a>
     </td> 
     <td>
-      <a href="https://github.com/janagt"><img src="https://avatars.githubusercontent.com/u/10874709?v=4" width="120px;" height="120px;"></a>
+      <a href="https://github.com/janagt"><img src="https://conectagen.netlify.app/assets/img/dev-jana.png" width="120px;" height="120px;"></a>
       <a href="https://www.linkedin.com/in/janaina-teixeira/"><p>Janaina Teixeira</p></a>
     </td>
     <td>
-      <a href="https://github.com/leticiapaoleschi"><img src="https://avatars.githubusercontent.com/u/100284453?v=4" width="120px;" height="120px;"></a>
+      <a href="https://github.com/leticiapaoleschi"><img src="https://conectagen.netlify.app/assets/img/dev-leticia.png" width="120px;" height="120px;"></a>
       <a href="https://www.linkedin.com/in/leticiapaoleschi/"><p>Letícia Paoleschi</p></a>
     </td>
     <td>
-      <a href="https://github.com/MatheusMSF"><img src="https://i.imgur.com/3vxbZtY.png" width="120px;" height="120px;"></a>
+      <a href="https://github.com/MatheusMSF"><img src="https://conectagen.netlify.app/assets/img/dev-matheus.png" width="120px;" height="120px;"></a>
       <a href="https://www.linkedin.com/in/matheus-ferreira-317b98231/"><p>Matheus Ferreira</p></a>
     </td>
     <td>
-      <a href="https://github.com/victormreis"><img src="https://avatars.githubusercontent.com/u/57497791?v=4" width="120px;" height="120px;"></a>
+      <a href="https://github.com/victormreis"><img src="https://conectagen.netlify.app/assets/img/dev-victor.png" width="120px;" height="120px;"></a>
       <a href="https://www.linkedin.com/in/victorm-reis/"><p>Victor Martins</p></a>
     </td>
   </tr>
