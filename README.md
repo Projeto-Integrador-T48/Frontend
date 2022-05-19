@@ -1,31 +1,107 @@
-<<<<<<< HEAD
-# ProjetonIntFront
+<p align="center">
+ <a href="https://conectagen.netlify.app/#/inicio"><img src="https://i.imgur.com/x3NdCab.png" alt="" height="400px" width="800px">
+  
+</p>
+<h1 align="center">ConectaGen</h1>
+<p align="center">Primeira fase concluída 🚀</p>
+<p align="center">
+  <a href="#Sobre">Sobre</a> •
+  <a href="#Funcionalidades">Funcionalidades</a> •
+  <a href="#Executar">Como Executar</a> •
+  <a href="#Tecnologias">Tecnologias</a> •
+  <a href="#Integrantes">Integrantes</a> 
+ 
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+<h2 id="Sobre">:computer: Sobre o projeto</h2>
+<p>
+  O projeto foi pautado a partir da ODS 8 da ONU que tem como intuito promover um turismo econômico e sustentável. Dessa forma, o Conecta surgiu com o objetivo de interligar pessoas com pequenos estabelecimentos de turismo e cultura em diversas regiões do Brasil.
 
-## Development server
+<p>
+  Este projeto foi acompanhado pelos instrutores  <a href="https://www.linkedin.com/in/anderson-mendon%C3%A7a-de-abreu-11179a85/">Anderson Mendonça de Abreu,  <a href= "https://www.linkedin.com/in/jessica-lopes-teodozio/">Jessica Lopes</a>, <a href="https://www.linkedin.com/in/thiago-faccipieri/">Thiago Faccipieri</a> e <a href="https://www.linkedin.com/in/aimeezita/">Aimee Thompson</a> que nos guiaram durante a jornada de desenvolvimento colocando em pratica todos os conhecimentos de backend e frontend adquiridos durante o bootcamp em nosso Projeto Integrador.  
+</p>
+<h3> Acesse a ConectaGen por aqui: <a href="https://conectagen.netlify.app/#/inicio">Projeto ConectaGen</a> </h3>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h2 id="Funcionalidades">⚙️ Funcionalidades</h2>
 
-## Build
+<h3>Usuário</h3>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  - [x] Cadastrar usuário
+  - [x] Logar na plataforma
+  - [x] Editar usuário
 
-## Running unit tests
+<h3>Postagem:</h3>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  - [x] Criar um post com o sem foto
+  - [x] Feed com todas as postagens
+  - [x] Editar postagens de autoria propria
+  - [x] Deletar uma postagem de autoria propria
 
-## Running end-to-end tests
+<h3>Tema</h3>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+  - [x] Criar tema
+  - [x] Consultar todas os temas  
+  - [x] Editar um tema caso não haja postagem relacionada
+  - [x] Deletar o cadastro de tema
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
-# Frontend
->>>>>>> faff149b660972fe9994dca1d5be7100e3c71749
+<h2 id="Executar">🚀 Como executar o projeto</h2>
+
+<h3> Back-end</h3>
+<p>Você pode ver a documentação do back-end e testar a api através do swagger do projeto no heroku clicando <a href="https://conectagen.herokuapp.com/">aqui</a>.</p>
+<p> Para acessar utilize o usuario: root e senha: root </p>
+
+
+
+<h3> Front-end</h3>
+<p>Você pode acessar o nosso front-end que está hospedado no <em>netlify<em> e testar nossa aplicação clicando <a href="https://conectagen.netlify.app/#/inicio">aqui</a>.</p>
+
+<br/>
+
+<h2 id="Tecnologias">🛠 Tecnologias</h2>
+
+
+<a href="https://angular.io/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular.png" title="Angular" height="62px" width="62px"></a>
+<a href="https://www.typescriptlang.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" height="68px" width="52px"></a>
+<a href="https://www.w3schools.com/html/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" height="62px" width="62px"></a>
+<a href="https://www.w3schools.com/css/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" height="62px" width="62px"></a>
+<a href="https://getbootstrap.com.br/"><img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap" title="Bootstrap" height="62px" width="62px"></a>
+
+<p>Utilitários:</p>
+<a href="https://git-scm.com/"><img src="https://img.icons8.com/color/344/git.png" alt="Git" title="Git" height="62px" width="62px"></a>
+<a href="https://github.com/"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" title="GitHub" height="62px" width="62px"></a>
+<a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/fluency/344/visual-studio-code-2019.png" alt="VSCode" title="VSCode" height="52px" width="52px"></a>
+
+
+<h2 id="Integrantes">👨‍💻 Integrantes do Grupo</h2>
+<p>Este projeto foi criado pelo Grupo 03 da turma 48 com muito ❤️ e carinho, conheça os integrantes do time:</p>
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/EduardaMatias"><img src="https://conectagen.netlify.app/assets/img/dev-duda.png" width="120px;" height="120px;"></a>  
+      <a href="https://www.linkedin.com/in/eduarda-matias-8843481b8/"><p>Eduarda Matias</p></a>
+    </td>
+    <td>
+      <a href="https://github.com/Fernando-Oliver"><img src="https://conectagen.netlify.app/assets/img/dev-fernando.png" width="120px;" height="120px;"></a>
+      <a href="https://www.linkedin.com/in/fernando-oliveira-255b64174/"><p>Fernando Oliveira</p></a>
+    </td> 
+    <td>
+      <a href="https://github.com/janagt"><img src="https://conectagen.netlify.app/assets/img/dev-jana.png" width="120px;" height="120px;"></a>
+      <a href="https://www.linkedin.com/in/janaina-teixeira/"><p>Janaina Teixeira</p></a>
+    </td>
+    <td>
+      <a href="https://github.com/leticiapaoleschi"><img src="https://conectagen.netlify.app/assets/img/dev-leticia.png" width="120px;" height="120px;"></a>
+      <a href="https://www.linkedin.com/in/leticiapaoleschi/"><p>Letícia Paoleschi</p></a>
+    </td>
+    <td>
+      <a href="https://github.com/MatheusMSF"><img src="https://conectagen.netlify.app/assets/img/dev-matheus.png" width="120px;" height="120px;"></a>
+      <a href="https://www.linkedin.com/in/matheus-ferreira-317b98231/"><p>Matheus Ferreira</p></a>
+    </td>
+    <td>
+      <a href="https://github.com/victormreis"><img src="https://conectagen.netlify.app/assets/img/dev-victor.png" width="120px;" height="120px;"></a>
+      <a href="https://www.linkedin.com/in/victorm-reis/"><p>Victor Martins</p></a>
+    </td>
+  </tr>
+</table>

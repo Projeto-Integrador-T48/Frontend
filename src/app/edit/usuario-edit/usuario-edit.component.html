@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="container mt-4">
+  <div class="container vh-1080 my-5">
     <div class="row">
 
       <div class="col-md-3 mb-5">
@@ -21,10 +21,10 @@
             <button class="w-100 text-left btn btn-violeta text-cg-50 mx-3 my-1 px-3">
               <i class="fa fa-plus-square-o text-cg-50 pr-2" aria-hidden="true"></i> Cadastrar tema
             </button> -->
-            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" routerLink="/minhas-postagens">
+            <button class="w-100 text-left btn btn-cg-100 text-cg-600 mx-3 my-1 px-3" routerLink="/minhas-postagens">
               <i class="fa fa-user-o pr-2 text-violeta" aria-hidden="true"></i> Minhas postagens
             </button>
-            <button class="w-100 text-left btn btn-cg-200 text-cg-500 mx-3 my-1 px-3" [routerLink]="['/usuario-edit', idUser]">
+            <button class="w-100 text-left btn btn-cg-100 text-cg-600 mx-3 my-1 px-3 disabled" [routerLink]="['/usuario-edit', idUser]">
               <i class="fa fa-sliders pr-2 text-violeta" aria-hidden="true"></i> Editar perfil
             </button>
           </div>
@@ -94,8 +94,8 @@
 
           <div class="row mt-3">
             <div class="col-md-12 d-flex">
-              <button class="btn btn-outline-verde px-4 mt-1" routerLink="/feed">Voltar</button>
-              <button (click)="atualizar()" class="btn btn-verde px-4 mt-1">Atualizar</button>
+              <button type="button" class="btn btn-outline-dark mr-3 px-4 mt-1" routerLink="/feed">Voltar</button>
+              <button type="submit" (click)="atualizar()" class="btn btn-success px-4 mt-1">Atualizar</button>
             </div>
           </div>
         </form>
@@ -105,59 +105,3 @@
     </div>
   </div>
 </div>
-
-<!--
-<div class="main container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row d-flex justify-content-center ">
-        <div class="col-md-4">
-          <h1 class="text-center">Atualize seu perfil</h1>
-
-          <form>
-            <div class="form-group">
-              <label for="">Nome:</label>
-              <div class="input d-flex align-items-center">
-                <i class="fa fa-user-o px-2" aria-hidden="true"></i>
-                <input type="text" class="form-control" placeholder="Insira seu nome">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="">Email:</label>
-              <div class="input d-flex align-items-center">
-                <i class="fa fa-envelope-o px-2" aria-hidden="true"></i>
-                <input type="text" class="form-control " placeholder="Insira seu email">
-              </div>
-            </div>
-            <div class="form-group d-flex flex-column">
-              <label for="">Foto de perfil</label>
-              <div class="input d-flex align-items-center">
-                <i class="fa fa-file-image-o px-2" aria-hidden="true"></i>
-                <input type="text" class="form-control" placeholder="http://imgur.com/foto.png">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="">Senha:</label>
-              <div class="input d-flex align-items-center">
-                <i class="fa fa-lock px-2" aria-hidden="true"></i>
-                <input type="password" class="form-control" placeholder="Insira sua senha">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="">Confirmar senha:</label>
-              <div class="input d-flex align-items-center">
-                <i class="fa fa-lock px-2" aria-hidden="true"></i>
-                <input type="password" class="form-control" placeholder="Confirme sua senha">
-              </div>
-            </div>
-            <button class="btn btn-secondary w-30 d-block mx-auto px-5">Atualizar</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div> -->
-
-
-
