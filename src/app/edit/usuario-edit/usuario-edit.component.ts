@@ -57,9 +57,9 @@ export class UsuarioEditComponent implements OnInit {
 
   // }
 
-  // tipoUsuario(event: any) {
-  //   this.tipoDeUsuario = event.target.value;
-  // }
+  tipoUsuario(event: any) {
+    this.tipoDeUsuario = event.target.value;
+  }
 
   // validaNome() {
   //   let txtNome = <HTMLLabelElement>document.querySelector('#txtNome');

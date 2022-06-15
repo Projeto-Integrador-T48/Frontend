@@ -36,7 +36,7 @@
 
       <div class="col-md-9"> 
 
-        <form>
+        <form #editUser="ngForm">
           <div class="row">
             <div class="col-md-12">
               <h3>Editar perfil</h3>
@@ -48,7 +48,10 @@
               <div class="form-group">
                 <label for="nome">Nome</label>
                 <span class="fa fa-user form-control-icon"></span>
-                <input [(ngModel)]="usuario.nome" type="text" class="form-control" placeholder="Insira seu nome" id="nome" name="nome">
+                <input [(ngModel)]="usuario.nome" type="text" class="form-control" placeholder="Insira seu nome" id="nome" name="nome" required #editName="ngModel" [ngClass]="{'is-invalid': editName.invalid}">
+                <div class="invalid-feedback">
+                  <span>O campo nome não pode estar vazio!</span>
+                </div>
               </div>
             </div>
           
@@ -56,7 +59,7 @@
               <div class="form-group">
                 <label for="email">Email</label>
                 <span class="fa fa-envelope form-control-icon"></span>
-                <input [(ngModel)]="usuario.usuario" type="text" class="form-control " placeholder="Insira seu email" id="email" name="email">
+                <input [(ngModel)]="usuario.usuario" type="text" class="form-control " placeholder="Insira seu email" id="email" name="email" required #editEmail="ngModel" [ngClass]="{'is-invalid': editEmail.invalid}" >
               </div>
             </div>
           </div>
@@ -95,7 +98,7 @@
           <div class="row mt-3">
             <div class="col-md-12 d-flex">
               <button type="button" class="btn btn-outline-dark mr-3 px-4 mt-1" routerLink="/feed">Voltar</button>
-              <button type="submit" (click)="atualizar()" class="btn btn-success px-4 mt-1">Atualizar</button>
+              <button type="submit" [disabled]="editUser.invalid" (click)="atualizar()" class="btn btn-success px-4 mt-1">Atualizar</button>
             </div>
           </div>
         </form>
